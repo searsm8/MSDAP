@@ -1,0 +1,714 @@
+ 
+****************************************
+Report : timing
+        -path full
+        -delay min
+        -max_paths 20
+Design : Chip
+Version: M-2016.12-SP5
+Date   : Mon Nov 26 15:25:41 2018
+****************************************
+
+ * Some/all delay information is back-annotated.
+
+Operating Conditions: ff_1v98_0c   Library: ff_1v98_0c
+	Parasitic source    : LPE
+	Parasitic mode      : RealRVirtualC
+	Extraction mode     : MIN_MAX
+	Extraction derating : 0/25/125
+
+Information: Percent of Arnoldi-based delays =  8.55%
+
+  Startpoint: inputL (input port clocked by dclk)
+  Endpoint: P_MSDAP/input_module_L/S2P[15].flop/Q_reg
+            (rising edge-triggered flip-flop clocked by sclk)
+  Path Group: sclk
+  Path Type: min
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock dclk (rise edge)                                  0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  input external delay                                    1.00       1.00 f
+  inputL (in)                                             0.00       1.00 f
+  InputL_PB/PAD (PB2)                                     0.09 *     1.09 f
+  InputL_PB/C (PB2)                                       0.75       1.85 f
+  U3/Y (INVXLM)                                           0.71 *     2.56 r
+  U4/Y (CLKINVX32M)                                       0.09 *     2.66 f
+  P_MSDAP/inputL (MSDAP_top)                              0.00       2.66 f
+  P_MSDAP/input_module_L/data_in (MSDAP_S2P_0)            0.00       2.66 f
+  P_MSDAP/input_module_L/S2P[15].flop/D (DFF_406)         0.00       2.66 f
+  P_MSDAP/input_module_L/S2P[15].flop/Q_reg/D (DFFRQX2M)
+                                                          0.00 *     2.66 f
+  data arrival time                                                  2.66
+
+  clock sclk (rise edge)                                  0.00       0.00
+  clock network delay (propagated)                        2.62       2.62
+  P_MSDAP/input_module_L/S2P[15].flop/Q_reg/CK (DFFRQX2M)
+                                                          0.00       2.62 r
+  library hold time                                       0.03       2.65
+  data required time                                                 2.65
+  --------------------------------------------------------------------------
+  data required time                                                 2.65
+  data arrival time                                                 -2.66
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.01
+
+
+  Startpoint: inputR (input port clocked by dclk)
+  Endpoint: P_MSDAP/input_module_R/S2P[15].flop/Q_reg
+            (rising edge-triggered flip-flop clocked by sclk)
+  Path Group: sclk
+  Path Type: min
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock dclk (rise edge)                                  0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  input external delay                                    1.00       1.00 f
+  inputR (in)                                             0.00       1.00 f
+  InputR_PB/PAD (PB2)                                     0.09 *     1.09 f
+  InputR_PB/C (PB2)                                       0.75       1.85 f
+  U1/Y (INVXLM)                                           0.71 *     2.56 r
+  U2/Y (CLKINVX32M)                                       0.10 *     2.66 f
+  P_MSDAP/inputR (MSDAP_top)                              0.00       2.66 f
+  P_MSDAP/input_module_R/data_in (MSDAP_S2P_1)            0.00       2.66 f
+  P_MSDAP/input_module_R/S2P[15].flop/D (DFF_335)         0.00       2.66 f
+  P_MSDAP/input_module_R/S2P[15].flop/Q_reg/D (DFFRQX2M)
+                                                          0.00 *     2.66 f
+  data arrival time                                                  2.66
+
+  clock sclk (rise edge)                                  0.00       0.00
+  clock network delay (propagated)                        2.59       2.59
+  P_MSDAP/input_module_R/S2P[15].flop/Q_reg/CK (DFFRQX2M)
+                                                          0.00       2.59 r
+  library hold time                                       0.03       2.62
+  data required time                                                 2.62
+  --------------------------------------------------------------------------
+  data required time                                                 2.62
+  data arrival time                                                 -2.66
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.04
+
+
+  Startpoint: start (input port clocked by sclk)
+  Endpoint: P_MSDAP/controller/reset_detector_DFF/Q_reg
+            (rising edge-triggered flip-flop clocked by sclk)
+  Path Group: sclk
+  Path Type: min
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock sclk (rise edge)                                  0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  input external delay                                    1.00       1.00 f
+  start (in)                                              0.00       1.00 f
+  Start_PB/PAD (PB2)                                      0.09 *     1.09 f
+  Start_PB/C (PB2)                                        0.83       1.91 f
+  P_MSDAP/start (MSDAP_top)                               0.00       1.91 f
+  P_MSDAP/controller/start (MSDAP_state_controller)       0.00       1.91 f
+  P_MSDAP/controller/U28/Y (OR2X2M)                       0.27 *     2.18 f
+  P_MSDAP/controller/U21/Y (DLY4X1M)                      0.76 *     2.94 f
+  P_MSDAP/controller/reset_detector_DFF/D (DFF_423)       0.00       2.94 f
+  P_MSDAP/controller/reset_detector_DFF/Q_reg/D (DFFRQX2M)
+                                                          0.00 *     2.94 f
+  data arrival time                                                  2.94
+
+  clock sclk (rise edge)                                  0.00       0.00
+  clock network delay (propagated)                        2.63       2.63
+  P_MSDAP/controller/reset_detector_DFF/Q_reg/CK (DFFRQX2M)
+                                                          0.00       2.63 r
+  library hold time                                       0.03       2.66
+  data required time                                                 2.66
+  --------------------------------------------------------------------------
+  data required time                                                 2.66
+  data arrival time                                                 -2.94
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.28
+
+
+  Startpoint: frame (input port clocked by dclk)
+  Endpoint: P_MSDAP/data_manager_R/coeff_en_DFF/Q_reg
+            (rising edge-triggered flip-flop clocked by sclk')
+  Path Group: sclk
+  Path Type: min
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock dclk (rise edge)                              13020.00   13020.00
+  clock network delay (ideal)                             0.00   13020.00
+  input external delay                                    1.00   13021.00 f
+  frame (in)                                              0.00   13021.00 f
+  Frame_PB/PAD (PB2)                                      0.09 * 13021.09 f
+  Frame_PB/C (PB2)                                        0.76   13021.85 f
+  U5/Y (CLKBUFX2M)                                        0.56 * 13022.42 f
+  P_MSDAP/frame (MSDAP_top)                               0.00   13022.42 f
+  P_MSDAP/data_manager_R/frame (MSDAP_data_manager_1)     0.00   13022.42 f
+  P_MSDAP/data_manager_R/U46/Y (NOR2X2M)                  0.22 * 13022.63 r
+  P_MSDAP/data_manager_R/U45/Y (NOR2X2M)                  0.08 * 13022.71 f
+  P_MSDAP/data_manager_R/coeff_en_DFF/D (DFF_323)         0.00   13022.71 f
+  P_MSDAP/data_manager_R/coeff_en_DFF/Q_reg/D (DFFRQX2M)
+                                                          0.00 * 13022.71 f
+  data arrival time                                              13022.71
+
+  clock sclk' (rise edge)                             13020.00   13020.00
+  clock network delay (propagated)                        2.15   13022.15
+  P_MSDAP/data_manager_R/coeff_en_DFF/Q_reg/CK (DFFRQX2M)
+                                                          0.00   13022.15 r
+  library hold time                                       0.04   13022.19
+  data required time                                             13022.19
+  --------------------------------------------------------------------------
+  data required time                                             13022.19
+  data arrival time                                              -13022.71
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.52
+
+
+  Startpoint: frame (input port clocked by dclk)
+  Endpoint: P_MSDAP/data_manager_L/coeff_en_DFF/Q_reg
+            (rising edge-triggered flip-flop clocked by sclk')
+  Path Group: sclk
+  Path Type: min
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock dclk (rise edge)                              13020.00   13020.00
+  clock network delay (ideal)                             0.00   13020.00
+  input external delay                                    1.00   13021.00 f
+  frame (in)                                              0.00   13021.00 f
+  Frame_PB/PAD (PB2)                                      0.09 * 13021.09 f
+  Frame_PB/C (PB2)                                        0.76   13021.85 f
+  U5/Y (CLKBUFX2M)                                        0.56 * 13022.42 f
+  P_MSDAP/frame (MSDAP_top)                               0.00   13022.42 f
+  P_MSDAP/data_manager_L/frame (MSDAP_data_manager_0)     0.00   13022.42 f
+  P_MSDAP/data_manager_L/U45/Y (OAI2B1X1M)                0.34 * 13022.75 r
+  P_MSDAP/data_manager_L/U26/Y (INVX2M)                   0.06 * 13022.81 f
+  P_MSDAP/data_manager_L/coeff_en_DFF/D (DFF_394)         0.00   13022.81 f
+  P_MSDAP/data_manager_L/coeff_en_DFF/Q_reg/D (DFFRQX2M)
+                                                          0.00 * 13022.81 f
+  data arrival time                                              13022.81
+
+  clock sclk' (rise edge)                             13020.00   13020.00
+  clock network delay (propagated)                        2.20   13022.20
+  P_MSDAP/data_manager_L/coeff_en_DFF/Q_reg/CK (DFFRQX2M)
+                                                          0.00   13022.20 r
+  library hold time                                       0.05   13022.24
+  data required time                                             13022.24
+  --------------------------------------------------------------------------
+  data required time                                             13022.24
+  data arrival time                                              -13022.81
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.57
+
+
+  Startpoint: P_MSDAP/input_module_L/S2P[10].flop/Q_reg
+              (rising edge-triggered flip-flop clocked by sclk)
+  Endpoint: P_MSDAP/input_module_L/S2P[9].flop/Q_reg
+            (rising edge-triggered flip-flop clocked by sclk)
+  Path Group: sclk
+  Path Type: min
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock sclk (rise edge)                                  0.00       0.00
+  clock network delay (propagated)                        2.62       2.62
+  P_MSDAP/input_module_L/S2P[10].flop/Q_reg/CK (DFFRQX2M)
+                                                          0.00       2.62 r
+  P_MSDAP/input_module_L/S2P[10].flop/Q_reg/Q (DFFRQX2M)
+                                                          0.61       3.23 f
+  P_MSDAP/input_module_L/S2P[10].flop/Q (DFF_411)         0.00       3.23 f
+  P_MSDAP/input_module_L/S2P[9].flop/D (DFF_412)          0.00       3.23 f
+  P_MSDAP/input_module_L/S2P[9].flop/Q_reg/D (DFFRQX2M)
+                                                          0.00 *     3.23 f
+  data arrival time                                                  3.23
+
+  clock sclk (rise edge)                                  0.00       0.00
+  clock network delay (propagated)                        2.62       2.62
+  P_MSDAP/input_module_L/S2P[9].flop/Q_reg/CK (DFFRQX2M)
+                                                          0.00       2.62 r
+  library hold time                                       0.03       2.65
+  data required time                                                 2.65
+  --------------------------------------------------------------------------
+  data required time                                                 2.65
+  data arrival time                                                 -3.23
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.58
+
+
+  Startpoint: P_MSDAP/input_module_R/S2P[3].flop/Q_reg
+              (rising edge-triggered flip-flop clocked by sclk)
+  Endpoint: P_MSDAP/input_module_R/S2P[2].flop/Q_reg
+            (rising edge-triggered flip-flop clocked by sclk)
+  Path Group: sclk
+  Path Type: min
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock sclk (rise edge)                                  0.00       0.00
+  clock network delay (propagated)                        2.59       2.59
+  P_MSDAP/input_module_R/S2P[3].flop/Q_reg/CK (DFFRQX2M)
+                                                          0.00       2.59 r
+  P_MSDAP/input_module_R/S2P[3].flop/Q_reg/Q (DFFRQX2M)
+                                                          0.61       3.20 f
+  P_MSDAP/input_module_R/S2P[3].flop/Q (DFF_347)          0.00       3.20 f
+  P_MSDAP/input_module_R/S2P[2].flop/D (DFF_348)          0.00       3.20 f
+  P_MSDAP/input_module_R/S2P[2].flop/Q_reg/D (DFFRQX2M)
+                                                          0.00 *     3.20 f
+  data arrival time                                                  3.20
+
+  clock sclk (rise edge)                                  0.00       0.00
+  clock network delay (propagated)                        2.59       2.59
+  P_MSDAP/input_module_R/S2P[2].flop/Q_reg/CK (DFFRQX2M)
+                                                          0.00       2.59 r
+  library hold time                                       0.03       2.62
+  data required time                                                 2.62
+  --------------------------------------------------------------------------
+  data required time                                                 2.62
+  data arrival time                                                 -3.20
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.58
+
+
+  Startpoint: P_MSDAP/input_module_R/S2P[10].flop/Q_reg
+              (rising edge-triggered flip-flop clocked by sclk)
+  Endpoint: P_MSDAP/input_module_R/S2P[9].flop/Q_reg
+            (rising edge-triggered flip-flop clocked by sclk)
+  Path Group: sclk
+  Path Type: min
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock sclk (rise edge)                                  0.00       0.00
+  clock network delay (propagated)                        2.59       2.59
+  P_MSDAP/input_module_R/S2P[10].flop/Q_reg/CK (DFFRQX2M)
+                                                          0.00       2.59 r
+  P_MSDAP/input_module_R/S2P[10].flop/Q_reg/Q (DFFRQX2M)
+                                                          0.61       3.21 f
+  P_MSDAP/input_module_R/S2P[10].flop/Q (DFF_340)         0.00       3.21 f
+  P_MSDAP/input_module_R/S2P[9].flop/D (DFF_341)          0.00       3.21 f
+  P_MSDAP/input_module_R/S2P[9].flop/Q_reg/D (DFFRQX2M)
+                                                          0.00 *     3.21 f
+  data arrival time                                                  3.21
+
+  clock sclk (rise edge)                                  0.00       0.00
+  clock network delay (propagated)                        2.59       2.59
+  P_MSDAP/input_module_R/S2P[9].flop/Q_reg/CK (DFFRQX2M)
+                                                          0.00       2.59 r
+  library hold time                                       0.03       2.62
+  data required time                                                 2.62
+  --------------------------------------------------------------------------
+  data required time                                                 2.62
+  data arrival time                                                 -3.21
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.58
+
+
+  Startpoint: P_MSDAP/input_module_R/S2P[13].flop/Q_reg
+              (rising edge-triggered flip-flop clocked by sclk)
+  Endpoint: P_MSDAP/input_module_R/S2P[12].flop/Q_reg
+            (rising edge-triggered flip-flop clocked by sclk)
+  Path Group: sclk
+  Path Type: min
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock sclk (rise edge)                                  0.00       0.00
+  clock network delay (propagated)                        2.59       2.59
+  P_MSDAP/input_module_R/S2P[13].flop/Q_reg/CK (DFFRQX2M)
+                                                          0.00       2.59 r
+  P_MSDAP/input_module_R/S2P[13].flop/Q_reg/Q (DFFRQX2M)
+                                                          0.61       3.20 f
+  P_MSDAP/input_module_R/S2P[13].flop/Q (DFF_337)         0.00       3.20 f
+  P_MSDAP/input_module_R/S2P[12].flop/D (DFF_338)         0.00       3.20 f
+  P_MSDAP/input_module_R/S2P[12].flop/Q_reg/D (DFFRQX2M)
+                                                          0.00 *     3.20 f
+  data arrival time                                                  3.20
+
+  clock sclk (rise edge)                                  0.00       0.00
+  clock network delay (propagated)                        2.59       2.59
+  P_MSDAP/input_module_R/S2P[12].flop/Q_reg/CK (DFFRQX2M)
+                                                          0.00       2.59 r
+  library hold time                                       0.03       2.62
+  data required time                                                 2.62
+  --------------------------------------------------------------------------
+  data required time                                                 2.62
+  data arrival time                                                 -3.20
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.58
+
+
+  Startpoint: P_MSDAP/input_module_R/S2P[2].flop/Q_reg
+              (rising edge-triggered flip-flop clocked by sclk)
+  Endpoint: P_MSDAP/input_module_R/S2P[1].flop/Q_reg
+            (rising edge-triggered flip-flop clocked by sclk)
+  Path Group: sclk
+  Path Type: min
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock sclk (rise edge)                                  0.00       0.00
+  clock network delay (propagated)                        2.59       2.59
+  P_MSDAP/input_module_R/S2P[2].flop/Q_reg/CK (DFFRQX2M)
+                                                          0.00       2.59 r
+  P_MSDAP/input_module_R/S2P[2].flop/Q_reg/Q (DFFRQX2M)
+                                                          0.61       3.21 f
+  P_MSDAP/input_module_R/S2P[2].flop/Q (DFF_348)          0.00       3.21 f
+  P_MSDAP/input_module_R/S2P[1].flop/D (DFF_349)          0.00       3.21 f
+  P_MSDAP/input_module_R/S2P[1].flop/Q_reg/D (DFFRQX2M)
+                                                          0.00 *     3.21 f
+  data arrival time                                                  3.21
+
+  clock sclk (rise edge)                                  0.00       0.00
+  clock network delay (propagated)                        2.59       2.59
+  P_MSDAP/input_module_R/S2P[1].flop/Q_reg/CK (DFFRQX2M)
+                                                          0.00       2.59 r
+  library hold time                                       0.03       2.62
+  data required time                                                 2.62
+  --------------------------------------------------------------------------
+  data required time                                                 2.62
+  data arrival time                                                 -3.21
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.58
+
+
+  Startpoint: P_MSDAP/input_module_L/S2P[14].flop/Q_reg
+              (rising edge-triggered flip-flop clocked by sclk)
+  Endpoint: P_MSDAP/input_module_L/S2P[13].flop/Q_reg
+            (rising edge-triggered flip-flop clocked by sclk)
+  Path Group: sclk
+  Path Type: min
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock sclk (rise edge)                                  0.00       0.00
+  clock network delay (propagated)                        2.62       2.62
+  P_MSDAP/input_module_L/S2P[14].flop/Q_reg/CK (DFFRQX2M)
+                                                          0.00       2.62 r
+  P_MSDAP/input_module_L/S2P[14].flop/Q_reg/Q (DFFRQX2M)
+                                                          0.61       3.24 f
+  P_MSDAP/input_module_L/S2P[14].flop/Q (DFF_407)         0.00       3.24 f
+  P_MSDAP/input_module_L/S2P[13].flop/D (DFF_408)         0.00       3.24 f
+  P_MSDAP/input_module_L/S2P[13].flop/Q_reg/D (DFFRQX2M)
+                                                          0.00 *     3.24 f
+  data arrival time                                                  3.24
+
+  clock sclk (rise edge)                                  0.00       0.00
+  clock network delay (propagated)                        2.62       2.62
+  P_MSDAP/input_module_L/S2P[13].flop/Q_reg/CK (DFFRQX2M)
+                                                          0.00       2.62 r
+  library hold time                                       0.03       2.65
+  data required time                                                 2.65
+  --------------------------------------------------------------------------
+  data required time                                                 2.65
+  data arrival time                                                 -3.24
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.58
+
+
+  Startpoint: P_MSDAP/input_module_L/S2P[12].flop/Q_reg
+              (rising edge-triggered flip-flop clocked by sclk)
+  Endpoint: P_MSDAP/input_module_L/S2P[11].flop/Q_reg
+            (rising edge-triggered flip-flop clocked by sclk)
+  Path Group: sclk
+  Path Type: min
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock sclk (rise edge)                                  0.00       0.00
+  clock network delay (propagated)                        2.62       2.62
+  P_MSDAP/input_module_L/S2P[12].flop/Q_reg/CK (DFFRQX2M)
+                                                          0.00       2.62 r
+  P_MSDAP/input_module_L/S2P[12].flop/Q_reg/Q (DFFRQX2M)
+                                                          0.62       3.24 f
+  P_MSDAP/input_module_L/S2P[12].flop/Q (DFF_409)         0.00       3.24 f
+  P_MSDAP/input_module_L/S2P[11].flop/D (DFF_410)         0.00       3.24 f
+  P_MSDAP/input_module_L/S2P[11].flop/Q_reg/D (DFFRQX2M)
+                                                          0.00 *     3.24 f
+  data arrival time                                                  3.24
+
+  clock sclk (rise edge)                                  0.00       0.00
+  clock network delay (propagated)                        2.62       2.62
+  P_MSDAP/input_module_L/S2P[11].flop/Q_reg/CK (DFFRQX2M)
+                                                          0.00       2.62 r
+  library hold time                                       0.03       2.65
+  data required time                                                 2.65
+  --------------------------------------------------------------------------
+  data required time                                                 2.65
+  data arrival time                                                 -3.24
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.59
+
+
+  Startpoint: P_MSDAP/input_module_L/S2P[5].flop/Q_reg
+              (rising edge-triggered flip-flop clocked by sclk)
+  Endpoint: P_MSDAP/input_module_L/S2P[4].flop/Q_reg
+            (rising edge-triggered flip-flop clocked by sclk)
+  Path Group: sclk
+  Path Type: min
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock sclk (rise edge)                                  0.00       0.00
+  clock network delay (propagated)                        2.62       2.62
+  P_MSDAP/input_module_L/S2P[5].flop/Q_reg/CK (DFFRQX2M)
+                                                          0.00       2.62 r
+  P_MSDAP/input_module_L/S2P[5].flop/Q_reg/Q (DFFRQX2M)
+                                                          0.62       3.24 f
+  P_MSDAP/input_module_L/S2P[5].flop/Q (DFF_416)          0.00       3.24 f
+  P_MSDAP/input_module_L/S2P[4].flop/D (DFF_417)          0.00       3.24 f
+  P_MSDAP/input_module_L/S2P[4].flop/Q_reg/D (DFFRQX2M)
+                                                          0.00 *     3.24 f
+  data arrival time                                                  3.24
+
+  clock sclk (rise edge)                                  0.00       0.00
+  clock network delay (propagated)                        2.62       2.62
+  P_MSDAP/input_module_L/S2P[4].flop/Q_reg/CK (DFFRQX2M)
+                                                          0.00       2.62 r
+  library hold time                                       0.03       2.65
+  data required time                                                 2.65
+  --------------------------------------------------------------------------
+  data required time                                                 2.65
+  data arrival time                                                 -3.24
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.59
+
+
+  Startpoint: P_MSDAP/input_module_R/S2P[11].flop/Q_reg
+              (rising edge-triggered flip-flop clocked by sclk)
+  Endpoint: P_MSDAP/input_module_R/S2P[10].flop/Q_reg
+            (rising edge-triggered flip-flop clocked by sclk)
+  Path Group: sclk
+  Path Type: min
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock sclk (rise edge)                                  0.00       0.00
+  clock network delay (propagated)                        2.59       2.59
+  P_MSDAP/input_module_R/S2P[11].flop/Q_reg/CK (DFFRQX2M)
+                                                          0.00       2.59 r
+  P_MSDAP/input_module_R/S2P[11].flop/Q_reg/Q (DFFRQX2M)
+                                                          0.62       3.21 f
+  P_MSDAP/input_module_R/S2P[11].flop/Q (DFF_339)         0.00       3.21 f
+  P_MSDAP/input_module_R/S2P[10].flop/D (DFF_340)         0.00       3.21 f
+  P_MSDAP/input_module_R/S2P[10].flop/Q_reg/D (DFFRQX2M)
+                                                          0.00 *     3.21 f
+  data arrival time                                                  3.21
+
+  clock sclk (rise edge)                                  0.00       0.00
+  clock network delay (propagated)                        2.59       2.59
+  P_MSDAP/input_module_R/S2P[10].flop/Q_reg/CK (DFFRQX2M)
+                                                          0.00       2.59 r
+  library hold time                                       0.03       2.62
+  data required time                                                 2.62
+  --------------------------------------------------------------------------
+  data required time                                                 2.62
+  data arrival time                                                 -3.21
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.59
+
+
+  Startpoint: P_MSDAP/input_module_L/S2P[9].flop/Q_reg
+              (rising edge-triggered flip-flop clocked by sclk)
+  Endpoint: P_MSDAP/input_module_L/S2P[8].flop/Q_reg
+            (rising edge-triggered flip-flop clocked by sclk)
+  Path Group: sclk
+  Path Type: min
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock sclk (rise edge)                                  0.00       0.00
+  clock network delay (propagated)                        2.62       2.62
+  P_MSDAP/input_module_L/S2P[9].flop/Q_reg/CK (DFFRQX2M)
+                                                          0.00       2.62 r
+  P_MSDAP/input_module_L/S2P[9].flop/Q_reg/Q (DFFRQX2M)
+                                                          0.62       3.24 f
+  P_MSDAP/input_module_L/S2P[9].flop/Q (DFF_412)          0.00       3.24 f
+  P_MSDAP/input_module_L/S2P[8].flop/D (DFF_413)          0.00       3.24 f
+  P_MSDAP/input_module_L/S2P[8].flop/Q_reg/D (DFFRQX2M)
+                                                          0.00 *     3.24 f
+  data arrival time                                                  3.24
+
+  clock sclk (rise edge)                                  0.00       0.00
+  clock network delay (propagated)                        2.62       2.62
+  P_MSDAP/input_module_L/S2P[8].flop/Q_reg/CK (DFFRQX2M)
+                                                          0.00       2.62 r
+  library hold time                                       0.03       2.65
+  data required time                                                 2.65
+  --------------------------------------------------------------------------
+  data required time                                                 2.65
+  data arrival time                                                 -3.24
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.59
+
+
+  Startpoint: P_MSDAP/input_module_L/S2P[7].flop/Q_reg
+              (rising edge-triggered flip-flop clocked by sclk)
+  Endpoint: P_MSDAP/input_module_L/S2P[6].flop/Q_reg
+            (rising edge-triggered flip-flop clocked by sclk)
+  Path Group: sclk
+  Path Type: min
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock sclk (rise edge)                                  0.00       0.00
+  clock network delay (propagated)                        2.62       2.62
+  P_MSDAP/input_module_L/S2P[7].flop/Q_reg/CK (DFFRQX2M)
+                                                          0.00       2.62 r
+  P_MSDAP/input_module_L/S2P[7].flop/Q_reg/Q (DFFRQX2M)
+                                                          0.62       3.24 f
+  P_MSDAP/input_module_L/S2P[7].flop/Q (DFF_414)          0.00       3.24 f
+  P_MSDAP/input_module_L/S2P[6].flop/D (DFF_415)          0.00       3.24 f
+  P_MSDAP/input_module_L/S2P[6].flop/Q_reg/D (DFFRQX2M)
+                                                          0.00 *     3.24 f
+  data arrival time                                                  3.24
+
+  clock sclk (rise edge)                                  0.00       0.00
+  clock network delay (propagated)                        2.62       2.62
+  P_MSDAP/input_module_L/S2P[6].flop/Q_reg/CK (DFFRQX2M)
+                                                          0.00       2.62 r
+  library hold time                                       0.03       2.65
+  data required time                                                 2.65
+  --------------------------------------------------------------------------
+  data required time                                                 2.65
+  data arrival time                                                 -3.24
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.59
+
+
+  Startpoint: P_MSDAP/input_module_R/S2P[6].flop/Q_reg
+              (rising edge-triggered flip-flop clocked by sclk)
+  Endpoint: P_MSDAP/input_module_R/S2P[5].flop/Q_reg
+            (rising edge-triggered flip-flop clocked by sclk)
+  Path Group: sclk
+  Path Type: min
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock sclk (rise edge)                                  0.00       0.00
+  clock network delay (propagated)                        2.59       2.59
+  P_MSDAP/input_module_R/S2P[6].flop/Q_reg/CK (DFFRQX2M)
+                                                          0.00       2.59 r
+  P_MSDAP/input_module_R/S2P[6].flop/Q_reg/Q (DFFRQX2M)
+                                                          0.62       3.21 f
+  P_MSDAP/input_module_R/S2P[6].flop/Q (DFF_344)          0.00       3.21 f
+  P_MSDAP/input_module_R/S2P[5].flop/D (DFF_345)          0.00       3.21 f
+  P_MSDAP/input_module_R/S2P[5].flop/Q_reg/D (DFFRQX2M)
+                                                          0.00 *     3.21 f
+  data arrival time                                                  3.21
+
+  clock sclk (rise edge)                                  0.00       0.00
+  clock network delay (propagated)                        2.59       2.59
+  P_MSDAP/input_module_R/S2P[5].flop/Q_reg/CK (DFFRQX2M)
+                                                          0.00       2.59 r
+  library hold time                                       0.03       2.62
+  data required time                                                 2.62
+  --------------------------------------------------------------------------
+  data required time                                                 2.62
+  data arrival time                                                 -3.21
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.59
+
+
+  Startpoint: P_MSDAP/input_module_L/S2P[8].flop/Q_reg
+              (rising edge-triggered flip-flop clocked by sclk)
+  Endpoint: P_MSDAP/input_module_L/S2P[7].flop/Q_reg
+            (rising edge-triggered flip-flop clocked by sclk)
+  Path Group: sclk
+  Path Type: min
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock sclk (rise edge)                                  0.00       0.00
+  clock network delay (propagated)                        2.62       2.62
+  P_MSDAP/input_module_L/S2P[8].flop/Q_reg/CK (DFFRQX2M)
+                                                          0.00       2.62 r
+  P_MSDAP/input_module_L/S2P[8].flop/Q_reg/Q (DFFRQX2M)
+                                                          0.62       3.24 f
+  P_MSDAP/input_module_L/S2P[8].flop/Q (DFF_413)          0.00       3.24 f
+  P_MSDAP/input_module_L/S2P[7].flop/D (DFF_414)          0.00       3.24 f
+  P_MSDAP/input_module_L/S2P[7].flop/Q_reg/D (DFFRQX2M)
+                                                          0.00 *     3.24 f
+  data arrival time                                                  3.24
+
+  clock sclk (rise edge)                                  0.00       0.00
+  clock network delay (propagated)                        2.62       2.62
+  P_MSDAP/input_module_L/S2P[7].flop/Q_reg/CK (DFFRQX2M)
+                                                          0.00       2.62 r
+  library hold time                                       0.03       2.65
+  data required time                                                 2.65
+  --------------------------------------------------------------------------
+  data required time                                                 2.65
+  data arrival time                                                 -3.24
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.59
+
+
+  Startpoint: P_MSDAP/input_module_L/S2P[6].flop/Q_reg
+              (rising edge-triggered flip-flop clocked by sclk)
+  Endpoint: P_MSDAP/input_module_L/S2P[5].flop/Q_reg
+            (rising edge-triggered flip-flop clocked by sclk)
+  Path Group: sclk
+  Path Type: min
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock sclk (rise edge)                                  0.00       0.00
+  clock network delay (propagated)                        2.62       2.62
+  P_MSDAP/input_module_L/S2P[6].flop/Q_reg/CK (DFFRQX2M)
+                                                          0.00       2.62 r
+  P_MSDAP/input_module_L/S2P[6].flop/Q_reg/Q (DFFRQX2M)
+                                                          0.62       3.24 f
+  P_MSDAP/input_module_L/S2P[6].flop/Q (DFF_415)          0.00       3.24 f
+  P_MSDAP/input_module_L/S2P[5].flop/D (DFF_416)          0.00       3.24 f
+  P_MSDAP/input_module_L/S2P[5].flop/Q_reg/D (DFFRQX2M)
+                                                          0.00 *     3.24 f
+  data arrival time                                                  3.24
+
+  clock sclk (rise edge)                                  0.00       0.00
+  clock network delay (propagated)                        2.62       2.62
+  P_MSDAP/input_module_L/S2P[5].flop/Q_reg/CK (DFFRQX2M)
+                                                          0.00       2.62 r
+  library hold time                                       0.03       2.65
+  data required time                                                 2.65
+  --------------------------------------------------------------------------
+  data required time                                                 2.65
+  data arrival time                                                 -3.24
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.59
+
+
+  Startpoint: P_MSDAP/input_module_L/S2P[4].flop/Q_reg
+              (rising edge-triggered flip-flop clocked by sclk)
+  Endpoint: P_MSDAP/input_module_L/S2P[3].flop/Q_reg
+            (rising edge-triggered flip-flop clocked by sclk)
+  Path Group: sclk
+  Path Type: min
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock sclk (rise edge)                                  0.00       0.00
+  clock network delay (propagated)                        2.62       2.62
+  P_MSDAP/input_module_L/S2P[4].flop/Q_reg/CK (DFFRQX2M)
+                                                          0.00       2.62 r
+  P_MSDAP/input_module_L/S2P[4].flop/Q_reg/Q (DFFRQX2M)
+                                                          0.62       3.24 f
+  P_MSDAP/input_module_L/S2P[4].flop/Q (DFF_417)          0.00       3.24 f
+  P_MSDAP/input_module_L/S2P[3].flop/D (DFF_418)          0.00       3.24 f
+  P_MSDAP/input_module_L/S2P[3].flop/Q_reg/D (DFFRQX2M)
+                                                          0.00 *     3.24 f
+  data arrival time                                                  3.24
+
+  clock sclk (rise edge)                                  0.00       0.00
+  clock network delay (propagated)                        2.62       2.62
+  P_MSDAP/input_module_L/S2P[3].flop/Q_reg/CK (DFFRQX2M)
+                                                          0.00       2.62 r
+  library hold time                                       0.03       2.65
+  data required time                                                 2.65
+  --------------------------------------------------------------------------
+  data required time                                                 2.65
+  data arrival time                                                 -3.24
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.59
+
+
+1

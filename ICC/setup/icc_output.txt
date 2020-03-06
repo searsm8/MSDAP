@@ -1,0 +1,14 @@
+icc_shell> ls
+.                             conPG.tcl          icc_lib.tcl
+..                            create_cell.tcl    icc_output.txt
+.nfs000000000511f8dd00017ea6  filenames.log      icc_read.tcl
+18m.v                         final_netlist.sdc  io.tdf
+Chip.v                        final_netlist.v    net.acts
+MSDAP.mw                      final_netlist.v~   preroute.tcl
+command.log                   floorplan.tcl
+icc_shell> pwd
+/home/eng/x/xxw122030/ASIC/ICC
+icc_shell> exit
+
+Thank you...
+

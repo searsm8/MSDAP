@@ -1,0 +1,976 @@
+Information: Updating design information... (UID-85)
+Information: Input delay ('rise') on clock port 'sclk' will be added to the clock's propagated skew. (TIM-112)
+Information: Input delay ('fall') on clock port 'sclk' will be added to the clock's propagated skew. (TIM-112)
+Information: Input delay ('rise') on clock port 'dclk' will be added to the clock's propagated skew. (TIM-112)
+Information: Input delay ('fall') on clock port 'dclk' will be added to the clock's propagated skew. (TIM-112)
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -max_paths 20
+Design : Chip
+Version: M-2016.12-SP5
+Date   : Mon Nov 26 12:56:13 2018
+****************************************
+
+ * Some/all delay information is back-annotated.
+
+Operating Conditions: ss_1v62_125c   Library: ss_1v62_125c
+	Parasitic source    : LPE
+	Parasitic mode      : RealRVirtualC
+	Extraction mode     : MIN_MAX
+	Extraction derating : 125/125/125
+
+Information: Percent of Arnoldi-based delays =  8.54%
+
+  Startpoint: frame (input port clocked by dclk)
+  Endpoint: P_MSDAP/data_manager_L/coeff_en_DFF/Q_reg
+            (rising edge-triggered flip-flop clocked by sclk')
+  Path Group: sclk
+  Path Type: max
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock dclk (rise edge)                              24738.00   24738.00
+  clock network delay (ideal)                             0.00   24738.00
+  input external delay                                    1.00   24739.00 r
+  frame (in)                                              0.00   24739.00 r
+  Frame_PB/PAD (PB2)                                      0.37 * 24739.37 r
+  Frame_PB/C (PB2)                                        1.54   24740.91 r
+  P_MSDAP/frame (MSDAP_top)                               0.00   24740.91 r
+  P_MSDAP/data_manager_L/frame (MSDAP_data_manager_0)     0.00   24740.91 r
+  P_MSDAP/data_manager_L/U45/Y (OAI2B1X1M)                0.26 * 24741.16 f
+  P_MSDAP/data_manager_L/U26/Y (INVX2M)                   0.17 * 24741.33 r
+  P_MSDAP/data_manager_L/coeff_en_DFF/D (DFF_394)         0.00   24741.33 r
+  P_MSDAP/data_manager_L/coeff_en_DFF/Q_reg/D (DFFRQX2M)
+                                                          0.00 * 24741.33 r
+  data arrival time                                              24741.33
+
+  clock sclk' (rise edge)                             24740.00   24740.00
+  clock network delay (propagated)                        2.62   24742.62
+  P_MSDAP/data_manager_L/coeff_en_DFF/Q_reg/CK (DFFRQX2M)
+                                                          0.00   24742.62 r
+  library setup time                                     -0.25   24742.37
+  data required time                                             24742.37
+  --------------------------------------------------------------------------
+  data required time                                             24742.37
+  data arrival time                                              -24741.33
+  --------------------------------------------------------------------------
+  slack (MET)                                                        1.04
+
+
+  Startpoint: frame (input port clocked by dclk)
+  Endpoint: P_MSDAP/data_manager_R/coeff_en_DFF/Q_reg
+            (rising edge-triggered flip-flop clocked by sclk')
+  Path Group: sclk
+  Path Type: max
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock dclk (rise edge)                              24738.00   24738.00
+  clock network delay (ideal)                             0.00   24738.00
+  input external delay                                    1.00   24739.00 r
+  frame (in)                                              0.00   24739.00 r
+  Frame_PB/PAD (PB2)                                      0.37 * 24739.37 r
+  Frame_PB/C (PB2)                                        1.54   24740.91 r
+  P_MSDAP/frame (MSDAP_top)                               0.00   24740.91 r
+  P_MSDAP/data_manager_R/frame (MSDAP_data_manager_1)     0.00   24740.91 r
+  P_MSDAP/data_manager_R/U46/Y (NOR2X2M)                  0.07 * 24740.97 f
+  P_MSDAP/data_manager_R/U45/Y (NOR2X2M)                  0.21 * 24741.18 r
+  P_MSDAP/data_manager_R/coeff_en_DFF/D (DFF_323)         0.00   24741.18 r
+  P_MSDAP/data_manager_R/coeff_en_DFF/Q_reg/D (DFFRQX2M)
+                                                          0.00 * 24741.18 r
+  data arrival time                                              24741.18
+
+  clock sclk' (rise edge)                             24740.00   24740.00
+  clock network delay (propagated)                        2.62   24742.62
+  P_MSDAP/data_manager_R/coeff_en_DFF/Q_reg/CK (DFFRQX2M)
+                                                          0.00   24742.62 r
+  library setup time                                     -0.27   24742.35
+  data required time                                             24742.35
+  --------------------------------------------------------------------------
+  data required time                                             24742.35
+  data arrival time                                              -24741.18
+  --------------------------------------------------------------------------
+  slack (MET)                                                        1.17
+
+
+  Startpoint: frame (input port clocked by dclk)
+  Endpoint: P_MSDAP/controller/input_en_DFF/Q_reg
+            (rising edge-triggered flip-flop clocked by sclk)
+  Path Group: sclk
+  Path Type: max
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock dclk (rise edge)                              11718.00   11718.00
+  clock network delay (ideal)                             0.00   11718.00
+  input external delay                                    1.00   11719.00 r
+  frame (in)                                              0.00   11719.00 r
+  Frame_PB/PAD (PB2)                                      0.37 * 11719.37 r
+  Frame_PB/C (PB2)                                        1.54   11720.91 r
+  P_MSDAP/frame (MSDAP_top)                               0.00   11720.91 r
+  P_MSDAP/controller/frame (MSDAP_state_controller)       0.00   11720.91 r
+  P_MSDAP/controller/U22/Y (NAND2X2M)                     0.10 * 11721.00 f
+  P_MSDAP/controller/U19/Y (NAND2X2M)                     0.12 * 11721.12 r
+  P_MSDAP/controller/input_en_DFF/D (DFF_0)               0.00   11721.12 r
+  P_MSDAP/controller/input_en_DFF/Q_reg/D (DFFRQX2M)      0.00 * 11721.12 r
+  data arrival time                                              11721.12
+
+  clock sclk (rise edge)                              11720.00   11720.00
+  clock network delay (propagated)                        3.06   11723.06
+  P_MSDAP/controller/input_en_DFF/Q_reg/CK (DFFRQX2M)     0.00   11723.06 r
+  library setup time                                     -0.25   11722.81
+  data required time                                             11722.81
+  --------------------------------------------------------------------------
+  data required time                                             11722.81
+  data arrival time                                              -11721.12
+  --------------------------------------------------------------------------
+  slack (MET)                                                        1.70
+
+
+  Startpoint: inputR (input port clocked by dclk)
+  Endpoint: P_MSDAP/input_module_R/S2P[15].flop/Q_reg
+            (rising edge-triggered flip-flop clocked by sclk)
+  Path Group: sclk
+  Path Type: max
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock dclk (rise edge)                              11718.00   11718.00
+  clock network delay (ideal)                             0.00   11718.00
+  input external delay                                    1.00   11719.00 r
+  inputR (in)                                             0.00   11719.00 r
+  InputR_PB/PAD (PB2)                                     0.37 * 11719.37 r
+  InputR_PB/C (PB2)                                       1.52   11720.89 r
+  P_MSDAP/inputR (MSDAP_top)                              0.00   11720.89 r
+  P_MSDAP/input_module_R/data_in (MSDAP_S2P_1)            0.00   11720.89 r
+  P_MSDAP/input_module_R/S2P[15].flop/D (DFF_335)         0.00   11720.89 r
+  P_MSDAP/input_module_R/S2P[15].flop/Q_reg/D (DFFRQX2M)
+                                                          0.00 * 11720.89 r
+  data arrival time                                              11720.89
+
+  clock sclk (rise edge)                              11720.00   11720.00
+  clock network delay (propagated)                        3.03   11723.03
+  P_MSDAP/input_module_R/S2P[15].flop/Q_reg/CK (DFFRQX2M)
+                                                          0.00   11723.03 r
+  library setup time                                     -0.24   11722.79
+  data required time                                             11722.79
+  --------------------------------------------------------------------------
+  data required time                                             11722.79
+  data arrival time                                              -11720.89
+  --------------------------------------------------------------------------
+  slack (MET)                                                        1.89
+
+
+  Startpoint: inputL (input port clocked by dclk)
+  Endpoint: P_MSDAP/input_module_L/S2P[15].flop/Q_reg
+            (rising edge-triggered flip-flop clocked by sclk)
+  Path Group: sclk
+  Path Type: max
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock dclk (rise edge)                              11718.00   11718.00
+  clock network delay (ideal)                             0.00   11718.00
+  input external delay                                    1.00   11719.00 r
+  inputL (in)                                             0.00   11719.00 r
+  InputL_PB/PAD (PB2)                                     0.37 * 11719.37 r
+  InputL_PB/C (PB2)                                       1.52   11720.89 r
+  P_MSDAP/inputL (MSDAP_top)                              0.00   11720.89 r
+  P_MSDAP/input_module_L/data_in (MSDAP_S2P_0)            0.00   11720.89 r
+  P_MSDAP/input_module_L/S2P[15].flop/D (DFF_406)         0.00   11720.89 r
+  P_MSDAP/input_module_L/S2P[15].flop/Q_reg/D (DFFRQX2M)
+                                                          0.00 * 11720.89 r
+  data arrival time                                              11720.89
+
+  clock sclk (rise edge)                              11720.00   11720.00
+  clock network delay (propagated)                        3.04   11723.04
+  P_MSDAP/input_module_L/S2P[15].flop/Q_reg/CK (DFFRQX2M)
+                                                          0.00   11723.04 r
+  library setup time                                     -0.24   11722.80
+  data required time                                             11722.80
+  --------------------------------------------------------------------------
+  data required time                                             11722.80
+  data arrival time                                              -11720.89
+  --------------------------------------------------------------------------
+  slack (MET)                                                        1.91
+
+
+  Startpoint: P_MSDAP/controller/state_reg[1]
+              (rising edge-triggered flip-flop clocked by sclk)
+  Endpoint: P_MSDAP/data_manager_R/data_mem/data_out_reg[7]
+            (rising edge-triggered flip-flop clocked by sclk')
+  Path Group: sclk
+  Path Type: max
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock sclk (rise edge)                                  0.00       0.00
+  clock network delay (propagated)                        3.07       3.07
+  P_MSDAP/controller/state_reg[1]/CK (DFFQX2M)            0.00       3.07 r
+  P_MSDAP/controller/state_reg[1]/Q (DFFQX2M)             0.81       3.88 r
+  P_MSDAP/controller/state[1] (MSDAP_state_controller)
+                                                          0.00       3.88 r
+  P_MSDAP/U19/Y (INVX2M)                                  0.38 *     4.26 f
+  P_MSDAP/data_manager_R/state[1] (MSDAP_data_manager_1)
+                                                          0.00       4.26 f
+  P_MSDAP/data_manager_R/U12/Y (NOR3X2M)                  1.25 *     5.52 r
+  P_MSDAP/data_manager_R/U25/Y (INVX2M)                   0.86 *     6.38 f
+  P_MSDAP/data_manager_R/U9/Y (OAI31X1M)                  0.35 *     6.73 r
+  P_MSDAP/data_manager_R/U26/Y (BUFX2M)                   1.32 *     8.05 r
+  P_MSDAP/data_manager_R/U36/Y (INVX2M)                   1.37 *     9.42 f
+  P_MSDAP/data_manager_R/U53/Y (AO22X2M)                  0.88 *    10.30 f
+  P_MSDAP/data_manager_R/data_mem/addr[1] (memory_DATA_WIDTH16_ADDR_WIDTH8_DEPTH256_1)
+                                                          0.00      10.30 f
+  P_MSDAP/data_manager_R/data_mem/U1879/Y (INVX2M)        0.16 *    10.46 r
+  P_MSDAP/data_manager_R/data_mem/U6063/Y (NOR2X1M)       0.17 *    10.63 f
+  P_MSDAP/data_manager_R/data_mem/U6089/Y (AND2X2M)       0.67 *    11.30 f
+  P_MSDAP/data_manager_R/data_mem/U200/Y (BUFX2M)         1.33 *    12.63 f
+  P_MSDAP/data_manager_R/data_mem/U7525/Y (AOI22X1M)      0.56 *    13.19 r
+  P_MSDAP/data_manager_R/data_mem/U7527/Y (NAND4X1M)      0.47 *    13.66 f
+  P_MSDAP/data_manager_R/data_mem/U7528/Y (OAI21X1M)      0.26 *    13.92 r
+  P_MSDAP/data_manager_R/data_mem/U7540/Y (NAND4X1M)      2.21 *    16.14 f
+  P_MSDAP/data_manager_R/data_mem/U7541/Y (OR4X1M)        1.20 *    17.34 f
+  P_MSDAP/data_manager_R/data_mem/data_out_reg[7]/D (EDFFX2M)
+                                                          0.00 *    17.34 f
+  data arrival time                                                 17.34
+
+  clock sclk' (rise edge)                                20.00      20.00
+  clock network delay (propagated)                        2.65      22.65
+  P_MSDAP/data_manager_R/data_mem/data_out_reg[7]/CK (EDFFX2M)
+                                                          0.00      22.65 r
+  library setup time                                     -0.35      22.29
+  data required time                                                22.29
+  --------------------------------------------------------------------------
+  data required time                                                22.29
+  data arrival time                                                -17.34
+  --------------------------------------------------------------------------
+  slack (MET)                                                        4.95
+
+
+  Startpoint: P_MSDAP/controller/state_reg[1]
+              (rising edge-triggered flip-flop clocked by sclk)
+  Endpoint: P_MSDAP/data_manager_R/data_mem/data_out_reg[14]
+            (rising edge-triggered flip-flop clocked by sclk')
+  Path Group: sclk
+  Path Type: max
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock sclk (rise edge)                                  0.00       0.00
+  clock network delay (propagated)                        3.07       3.07
+  P_MSDAP/controller/state_reg[1]/CK (DFFQX2M)            0.00       3.07 r
+  P_MSDAP/controller/state_reg[1]/Q (DFFQX2M)             0.81       3.88 r
+  P_MSDAP/controller/state[1] (MSDAP_state_controller)
+                                                          0.00       3.88 r
+  P_MSDAP/U19/Y (INVX2M)                                  0.38 *     4.26 f
+  P_MSDAP/data_manager_R/state[1] (MSDAP_data_manager_1)
+                                                          0.00       4.26 f
+  P_MSDAP/data_manager_R/U12/Y (NOR3X2M)                  1.25 *     5.52 r
+  P_MSDAP/data_manager_R/U25/Y (INVX2M)                   0.86 *     6.38 f
+  P_MSDAP/data_manager_R/U9/Y (OAI31X1M)                  0.35 *     6.73 r
+  P_MSDAP/data_manager_R/U26/Y (BUFX2M)                   1.32 *     8.05 r
+  P_MSDAP/data_manager_R/U36/Y (INVX2M)                   1.37 *     9.42 f
+  P_MSDAP/data_manager_R/U53/Y (AO22X2M)                  0.88 *    10.30 f
+  P_MSDAP/data_manager_R/data_mem/addr[1] (memory_DATA_WIDTH16_ADDR_WIDTH8_DEPTH256_1)
+                                                          0.00      10.30 f
+  P_MSDAP/data_manager_R/data_mem/U1879/Y (INVX2M)        0.16 *    10.46 r
+  P_MSDAP/data_manager_R/data_mem/U6063/Y (NOR2X1M)       0.17 *    10.63 f
+  P_MSDAP/data_manager_R/data_mem/U6089/Y (AND2X2M)       0.67 *    11.30 f
+  P_MSDAP/data_manager_R/data_mem/U200/Y (BUFX2M)         1.33 *    12.63 f
+  P_MSDAP/data_manager_R/data_mem/U8792/Y (AOI22X1M)      0.61 *    13.24 r
+  P_MSDAP/data_manager_R/data_mem/U8794/Y (NAND4X1M)      0.49 *    13.72 f
+  P_MSDAP/data_manager_R/data_mem/U8795/Y (OAI21X1M)      0.25 *    13.98 r
+  P_MSDAP/data_manager_R/data_mem/U8807/Y (NAND4X1M)      1.92 *    15.90 f
+  P_MSDAP/data_manager_R/data_mem/U8808/Y (OR4X1M)        1.36 *    17.26 f
+  P_MSDAP/data_manager_R/data_mem/data_out_reg[14]/D (EDFFX2M)
+                                                          0.01 *    17.26 f
+  data arrival time                                                 17.26
+
+  clock sclk' (rise edge)                                20.00      20.00
+  clock network delay (propagated)                        2.65      22.65
+  P_MSDAP/data_manager_R/data_mem/data_out_reg[14]/CK (EDFFX2M)
+                                                          0.00      22.65 r
+  library setup time                                     -0.39      22.26
+  data required time                                                22.26
+  --------------------------------------------------------------------------
+  data required time                                                22.26
+  data arrival time                                                -17.26
+  --------------------------------------------------------------------------
+  slack (MET)                                                        4.99
+
+
+  Startpoint: P_MSDAP/controller/state_reg[1]
+              (rising edge-triggered flip-flop clocked by sclk)
+  Endpoint: P_MSDAP/data_manager_R/data_mem/data_out_reg[1]
+            (rising edge-triggered flip-flop clocked by sclk')
+  Path Group: sclk
+  Path Type: max
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock sclk (rise edge)                                  0.00       0.00
+  clock network delay (propagated)                        3.07       3.07
+  P_MSDAP/controller/state_reg[1]/CK (DFFQX2M)            0.00       3.07 r
+  P_MSDAP/controller/state_reg[1]/Q (DFFQX2M)             0.81       3.88 r
+  P_MSDAP/controller/state[1] (MSDAP_state_controller)
+                                                          0.00       3.88 r
+  P_MSDAP/U19/Y (INVX2M)                                  0.38 *     4.26 f
+  P_MSDAP/data_manager_R/state[1] (MSDAP_data_manager_1)
+                                                          0.00       4.26 f
+  P_MSDAP/data_manager_R/U12/Y (NOR3X2M)                  1.25 *     5.52 r
+  P_MSDAP/data_manager_R/U25/Y (INVX2M)                   0.86 *     6.38 f
+  P_MSDAP/data_manager_R/U9/Y (OAI31X1M)                  0.35 *     6.73 r
+  P_MSDAP/data_manager_R/U26/Y (BUFX2M)                   1.32 *     8.05 r
+  P_MSDAP/data_manager_R/U36/Y (INVX2M)                   1.37 *     9.42 f
+  P_MSDAP/data_manager_R/U53/Y (AO22X2M)                  0.88 *    10.30 f
+  P_MSDAP/data_manager_R/data_mem/addr[1] (memory_DATA_WIDTH16_ADDR_WIDTH8_DEPTH256_1)
+                                                          0.00      10.30 f
+  P_MSDAP/data_manager_R/data_mem/U1879/Y (INVX2M)        0.16 *    10.46 r
+  P_MSDAP/data_manager_R/data_mem/U6063/Y (NOR2X1M)       0.17 *    10.63 f
+  P_MSDAP/data_manager_R/data_mem/U6089/Y (AND2X2M)       0.67 *    11.30 f
+  P_MSDAP/data_manager_R/data_mem/U200/Y (BUFX2M)         1.33 *    12.63 f
+  P_MSDAP/data_manager_R/data_mem/U6417/Y (AOI22X1M)      0.47 *    13.10 r
+  P_MSDAP/data_manager_R/data_mem/U6419/Y (NAND4X1M)      0.96 *    14.06 f
+  P_MSDAP/data_manager_R/data_mem/U6420/Y (OAI21X1M)      0.35 *    14.41 r
+  P_MSDAP/data_manager_R/data_mem/U6454/Y (NAND4X1M)      1.59 *    16.00 f
+  P_MSDAP/data_manager_R/data_mem/U6455/Y (OR4X1M)        1.11 *    17.11 f
+  P_MSDAP/data_manager_R/data_mem/data_out_reg[1]/D (EDFFX2M)
+                                                          0.00 *    17.12 f
+  data arrival time                                                 17.12
+
+  clock sclk' (rise edge)                                20.00      20.00
+  clock network delay (propagated)                        2.65      22.65
+  P_MSDAP/data_manager_R/data_mem/data_out_reg[1]/CK (EDFFX2M)
+                                                          0.00      22.65 r
+  library setup time                                     -0.36      22.29
+  data required time                                                22.29
+  --------------------------------------------------------------------------
+  data required time                                                22.29
+  data arrival time                                                -17.12
+  --------------------------------------------------------------------------
+  slack (MET)                                                        5.17
+
+
+  Startpoint: P_MSDAP/controller/state_reg[1]
+              (rising edge-triggered flip-flop clocked by sclk)
+  Endpoint: P_MSDAP/data_manager_R/data_mem/data_out_reg[13]
+            (rising edge-triggered flip-flop clocked by sclk')
+  Path Group: sclk
+  Path Type: max
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock sclk (rise edge)                                  0.00       0.00
+  clock network delay (propagated)                        3.07       3.07
+  P_MSDAP/controller/state_reg[1]/CK (DFFQX2M)            0.00       3.07 r
+  P_MSDAP/controller/state_reg[1]/Q (DFFQX2M)             0.81       3.88 r
+  P_MSDAP/controller/state[1] (MSDAP_state_controller)
+                                                          0.00       3.88 r
+  P_MSDAP/U19/Y (INVX2M)                                  0.38 *     4.26 f
+  P_MSDAP/data_manager_R/state[1] (MSDAP_data_manager_1)
+                                                          0.00       4.26 f
+  P_MSDAP/data_manager_R/U12/Y (NOR3X2M)                  1.25 *     5.52 r
+  P_MSDAP/data_manager_R/U25/Y (INVX2M)                   0.86 *     6.38 f
+  P_MSDAP/data_manager_R/U9/Y (OAI31X1M)                  0.35 *     6.73 r
+  P_MSDAP/data_manager_R/U26/Y (BUFX2M)                   1.32 *     8.05 r
+  P_MSDAP/data_manager_R/U36/Y (INVX2M)                   1.37 *     9.42 f
+  P_MSDAP/data_manager_R/U53/Y (AO22X2M)                  0.88 *    10.30 f
+  P_MSDAP/data_manager_R/data_mem/addr[1] (memory_DATA_WIDTH16_ADDR_WIDTH8_DEPTH256_1)
+                                                          0.00      10.30 f
+  P_MSDAP/data_manager_R/data_mem/U1879/Y (INVX2M)        0.16 *    10.46 r
+  P_MSDAP/data_manager_R/data_mem/U6063/Y (NOR2X1M)       0.17 *    10.63 f
+  P_MSDAP/data_manager_R/data_mem/U6089/Y (AND2X2M)       0.67 *    11.30 f
+  P_MSDAP/data_manager_R/data_mem/U200/Y (BUFX2M)         1.33 *    12.63 f
+  P_MSDAP/data_manager_R/data_mem/U8589/Y (AOI22X1M)      0.50 *    13.13 r
+  P_MSDAP/data_manager_R/data_mem/U8591/Y (NAND4X1M)      0.94 *    14.08 f
+  P_MSDAP/data_manager_R/data_mem/U8592/Y (OAI21X1M)      0.37 *    14.45 r
+  P_MSDAP/data_manager_R/data_mem/U8626/Y (NAND4X1M)      1.54 *    15.98 f
+  P_MSDAP/data_manager_R/data_mem/U8627/Y (OR4X1M)        1.06 *    17.04 f
+  P_MSDAP/data_manager_R/data_mem/data_out_reg[13]/D (EDFFX2M)
+                                                          0.00 *    17.05 f
+  data arrival time                                                 17.05
+
+  clock sclk' (rise edge)                                20.00      20.00
+  clock network delay (propagated)                        2.65      22.65
+  P_MSDAP/data_manager_R/data_mem/data_out_reg[13]/CK (EDFFX2M)
+                                                          0.00      22.65 r
+  library setup time                                     -0.35      22.29
+  data required time                                                22.29
+  --------------------------------------------------------------------------
+  data required time                                                22.29
+  data arrival time                                                -17.05
+  --------------------------------------------------------------------------
+  slack (MET)                                                        5.25
+
+
+  Startpoint: P_MSDAP/controller/state_reg[1]
+              (rising edge-triggered flip-flop clocked by sclk)
+  Endpoint: P_MSDAP/data_manager_R/data_mem/data_out_reg[8]
+            (rising edge-triggered flip-flop clocked by sclk')
+  Path Group: sclk
+  Path Type: max
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock sclk (rise edge)                                  0.00       0.00
+  clock network delay (propagated)                        3.07       3.07
+  P_MSDAP/controller/state_reg[1]/CK (DFFQX2M)            0.00       3.07 r
+  P_MSDAP/controller/state_reg[1]/Q (DFFQX2M)             0.81       3.88 r
+  P_MSDAP/controller/state[1] (MSDAP_state_controller)
+                                                          0.00       3.88 r
+  P_MSDAP/U19/Y (INVX2M)                                  0.38 *     4.26 f
+  P_MSDAP/data_manager_R/state[1] (MSDAP_data_manager_1)
+                                                          0.00       4.26 f
+  P_MSDAP/data_manager_R/U12/Y (NOR3X2M)                  1.25 *     5.52 r
+  P_MSDAP/data_manager_R/U25/Y (INVX2M)                   0.86 *     6.38 f
+  P_MSDAP/data_manager_R/U9/Y (OAI31X1M)                  0.35 *     6.73 r
+  P_MSDAP/data_manager_R/U26/Y (BUFX2M)                   1.32 *     8.05 r
+  P_MSDAP/data_manager_R/U36/Y (INVX2M)                   1.37 *     9.42 f
+  P_MSDAP/data_manager_R/U51/Y (AO22X2M)                  0.85 *    10.27 f
+  P_MSDAP/data_manager_R/data_mem/addr[2] (memory_DATA_WIDTH16_ADDR_WIDTH8_DEPTH256_1)
+                                                          0.00      10.27 f
+  P_MSDAP/data_manager_R/data_mem/U1878/Y (INVX2M)        0.20 *    10.47 r
+  P_MSDAP/data_manager_R/data_mem/U6062/Y (NOR2X1M)       0.17 *    10.64 f
+  P_MSDAP/data_manager_R/data_mem/U6069/Y (AND2X2M)       0.63 *    11.27 f
+  P_MSDAP/data_manager_R/data_mem/U148/Y (BUFX2M)         1.45 *    12.72 f
+  P_MSDAP/data_manager_R/data_mem/U7554/Y (AOI22X1M)      0.56 *    13.28 r
+  P_MSDAP/data_manager_R/data_mem/U7557/Y (NAND4X1M)      0.73 *    14.00 f
+  P_MSDAP/data_manager_R/data_mem/U7563/Y (OAI21X1M)      0.46 *    14.47 r
+  P_MSDAP/data_manager_R/data_mem/U7586/Y (NAND4X1M)      0.71 *    15.17 f
+  P_MSDAP/data_manager_R/data_mem/U7722/Y (OR4X1M)        1.68 *    16.85 f
+  P_MSDAP/data_manager_R/data_mem/data_out_reg[8]/D (EDFFX2M)
+                                                          0.03 *    16.88 f
+  data arrival time                                                 16.88
+
+  clock sclk' (rise edge)                                20.00      20.00
+  clock network delay (propagated)                        2.65      22.65
+  P_MSDAP/data_manager_R/data_mem/data_out_reg[8]/CK (EDFFX2M)
+                                                          0.00      22.65 r
+  library setup time                                     -0.51      22.13
+  data required time                                                22.13
+  --------------------------------------------------------------------------
+  data required time                                                22.13
+  data arrival time                                                -16.88
+  --------------------------------------------------------------------------
+  slack (MET)                                                        5.25
+
+
+  Startpoint: P_MSDAP/controller/state_reg[1]
+              (rising edge-triggered flip-flop clocked by sclk)
+  Endpoint: P_MSDAP/data_manager_R/data_mem/data_out_reg[4]
+            (rising edge-triggered flip-flop clocked by sclk')
+  Path Group: sclk
+  Path Type: max
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock sclk (rise edge)                                  0.00       0.00
+  clock network delay (propagated)                        3.07       3.07
+  P_MSDAP/controller/state_reg[1]/CK (DFFQX2M)            0.00       3.07 r
+  P_MSDAP/controller/state_reg[1]/Q (DFFQX2M)             0.81       3.88 r
+  P_MSDAP/controller/state[1] (MSDAP_state_controller)
+                                                          0.00       3.88 r
+  P_MSDAP/U19/Y (INVX2M)                                  0.38 *     4.26 f
+  P_MSDAP/data_manager_R/state[1] (MSDAP_data_manager_1)
+                                                          0.00       4.26 f
+  P_MSDAP/data_manager_R/U12/Y (NOR3X2M)                  1.25 *     5.52 r
+  P_MSDAP/data_manager_R/U25/Y (INVX2M)                   0.86 *     6.38 f
+  P_MSDAP/data_manager_R/U9/Y (OAI31X1M)                  0.35 *     6.73 r
+  P_MSDAP/data_manager_R/U26/Y (BUFX2M)                   1.32 *     8.05 r
+  P_MSDAP/data_manager_R/U36/Y (INVX2M)                   1.37 *     9.42 f
+  P_MSDAP/data_manager_R/U51/Y (AO22X2M)                  0.85 *    10.27 f
+  P_MSDAP/data_manager_R/data_mem/addr[2] (memory_DATA_WIDTH16_ADDR_WIDTH8_DEPTH256_1)
+                                                          0.00      10.27 f
+  P_MSDAP/data_manager_R/data_mem/U1878/Y (INVX2M)        0.20 *    10.47 r
+  P_MSDAP/data_manager_R/data_mem/U6062/Y (NOR2X1M)       0.17 *    10.64 f
+  P_MSDAP/data_manager_R/data_mem/U6069/Y (AND2X2M)       0.63 *    11.27 f
+  P_MSDAP/data_manager_R/data_mem/U148/Y (BUFX2M)         1.45 *    12.72 f
+  P_MSDAP/data_manager_R/data_mem/U6909/Y (AOI22X1M)      0.60 *    13.32 r
+  P_MSDAP/data_manager_R/data_mem/U6912/Y (NAND4X1M)      0.64 *    13.96 f
+  P_MSDAP/data_manager_R/data_mem/U6918/Y (OAI21X1M)      0.36 *    14.32 r
+  P_MSDAP/data_manager_R/data_mem/U6952/Y (NAND4X1M)      1.60 *    15.92 f
+  P_MSDAP/data_manager_R/data_mem/U6998/Y (OR4X1M)        1.12 *    17.04 f
+  P_MSDAP/data_manager_R/data_mem/data_out_reg[4]/D (EDFFX2M)
+                                                          0.00 *    17.04 f
+  data arrival time                                                 17.04
+
+  clock sclk' (rise edge)                                20.00      20.00
+  clock network delay (propagated)                        2.65      22.65
+  P_MSDAP/data_manager_R/data_mem/data_out_reg[4]/CK (EDFFX2M)
+                                                          0.00      22.65 r
+  library setup time                                     -0.35      22.29
+  data required time                                                22.29
+  --------------------------------------------------------------------------
+  data required time                                                22.29
+  data arrival time                                                -17.04
+  --------------------------------------------------------------------------
+  slack (MET)                                                        5.26
+
+
+  Startpoint: P_MSDAP/controller/state_reg[1]
+              (rising edge-triggered flip-flop clocked by sclk)
+  Endpoint: P_MSDAP/data_manager_R/data_mem/data_out_reg[5]
+            (rising edge-triggered flip-flop clocked by sclk')
+  Path Group: sclk
+  Path Type: max
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock sclk (rise edge)                                  0.00       0.00
+  clock network delay (propagated)                        3.07       3.07
+  P_MSDAP/controller/state_reg[1]/CK (DFFQX2M)            0.00       3.07 r
+  P_MSDAP/controller/state_reg[1]/Q (DFFQX2M)             0.81       3.88 r
+  P_MSDAP/controller/state[1] (MSDAP_state_controller)
+                                                          0.00       3.88 r
+  P_MSDAP/U19/Y (INVX2M)                                  0.38 *     4.26 f
+  P_MSDAP/data_manager_R/state[1] (MSDAP_data_manager_1)
+                                                          0.00       4.26 f
+  P_MSDAP/data_manager_R/U12/Y (NOR3X2M)                  1.25 *     5.52 r
+  P_MSDAP/data_manager_R/U25/Y (INVX2M)                   0.86 *     6.38 f
+  P_MSDAP/data_manager_R/U9/Y (OAI31X1M)                  0.35 *     6.73 r
+  P_MSDAP/data_manager_R/U26/Y (BUFX2M)                   1.32 *     8.05 r
+  P_MSDAP/data_manager_R/U36/Y (INVX2M)                   1.37 *     9.42 f
+  P_MSDAP/data_manager_R/U53/Y (AO22X2M)                  0.88 *    10.30 f
+  P_MSDAP/data_manager_R/data_mem/addr[1] (memory_DATA_WIDTH16_ADDR_WIDTH8_DEPTH256_1)
+                                                          0.00      10.30 f
+  P_MSDAP/data_manager_R/data_mem/U1879/Y (INVX2M)        0.16 *    10.46 r
+  P_MSDAP/data_manager_R/data_mem/U6063/Y (NOR2X1M)       0.17 *    10.63 f
+  P_MSDAP/data_manager_R/data_mem/U6089/Y (AND2X2M)       0.67 *    11.30 f
+  P_MSDAP/data_manager_R/data_mem/U200/Y (BUFX2M)         1.33 *    12.63 f
+  P_MSDAP/data_manager_R/data_mem/U7152/Y (AOI22X1M)      0.56 *    13.20 r
+  P_MSDAP/data_manager_R/data_mem/U7154/Y (NAND4X1M)      0.48 *    13.68 f
+  P_MSDAP/data_manager_R/data_mem/U7155/Y (OAI21X1M)      0.26 *    13.94 r
+  P_MSDAP/data_manager_R/data_mem/U7178/Y (NAND4X1M)      1.73 *    15.66 f
+  P_MSDAP/data_manager_R/data_mem/U7179/Y (OR4X1M)        1.31 *    16.97 f
+  P_MSDAP/data_manager_R/data_mem/data_out_reg[5]/D (EDFFX2M)
+                                                          0.01 *    16.98 f
+  data arrival time                                                 16.98
+
+  clock sclk' (rise edge)                                20.00      20.00
+  clock network delay (propagated)                        2.65      22.65
+  P_MSDAP/data_manager_R/data_mem/data_out_reg[5]/CK (EDFFX2M)
+                                                          0.00      22.65 r
+  library setup time                                     -0.39      22.26
+  data required time                                                22.26
+  --------------------------------------------------------------------------
+  data required time                                                22.26
+  data arrival time                                                -16.98
+  --------------------------------------------------------------------------
+  slack (MET)                                                        5.28
+
+
+  Startpoint: P_MSDAP/controller/state_reg[1]
+              (rising edge-triggered flip-flop clocked by sclk)
+  Endpoint: P_MSDAP/data_manager_R/data_mem/data_out_reg[15]
+            (rising edge-triggered flip-flop clocked by sclk')
+  Path Group: sclk
+  Path Type: max
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock sclk (rise edge)                                  0.00       0.00
+  clock network delay (propagated)                        3.07       3.07
+  P_MSDAP/controller/state_reg[1]/CK (DFFQX2M)            0.00       3.07 r
+  P_MSDAP/controller/state_reg[1]/Q (DFFQX2M)             0.81       3.88 r
+  P_MSDAP/controller/state[1] (MSDAP_state_controller)
+                                                          0.00       3.88 r
+  P_MSDAP/U19/Y (INVX2M)                                  0.38 *     4.26 f
+  P_MSDAP/data_manager_R/state[1] (MSDAP_data_manager_1)
+                                                          0.00       4.26 f
+  P_MSDAP/data_manager_R/U12/Y (NOR3X2M)                  1.25 *     5.52 r
+  P_MSDAP/data_manager_R/U25/Y (INVX2M)                   0.86 *     6.38 f
+  P_MSDAP/data_manager_R/U9/Y (OAI31X1M)                  0.35 *     6.73 r
+  P_MSDAP/data_manager_R/U26/Y (BUFX2M)                   1.32 *     8.05 r
+  P_MSDAP/data_manager_R/U36/Y (INVX2M)                   1.37 *     9.42 f
+  P_MSDAP/data_manager_R/U50/Y (AO22X2M)                  0.87 *    10.29 f
+  P_MSDAP/data_manager_R/data_mem/addr[3] (memory_DATA_WIDTH16_ADDR_WIDTH8_DEPTH256_1)
+                                                          0.00      10.29 f
+  P_MSDAP/data_manager_R/data_mem/U6081/Y (AND2X1M)       0.38 *    10.67 f
+  P_MSDAP/data_manager_R/data_mem/U6082/Y (AND2X2M)       0.63 *    11.30 f
+  P_MSDAP/data_manager_R/data_mem/U179/Y (BUFX2M)         1.35 *    12.66 f
+  P_MSDAP/data_manager_R/data_mem/U8971/Y (AOI22X1M)      0.52 *    13.17 r
+  P_MSDAP/data_manager_R/data_mem/U8975/Y (NAND4X1M)      0.51 *    13.68 f
+  P_MSDAP/data_manager_R/data_mem/U8976/Y (OAI21X1M)      0.26 *    13.94 r
+  P_MSDAP/data_manager_R/data_mem/U8988/Y (NAND4X1M)      1.78 *    15.72 f
+  P_MSDAP/data_manager_R/data_mem/U8989/Y (OR4X1M)        1.19 *    16.92 f
+  P_MSDAP/data_manager_R/data_mem/data_out_reg[15]/D (EDFFX2M)
+                                                          0.00 *    16.92 f
+  data arrival time                                                 16.92
+
+  clock sclk' (rise edge)                                20.00      20.00
+  clock network delay (propagated)                        2.65      22.65
+  P_MSDAP/data_manager_R/data_mem/data_out_reg[15]/CK (EDFFX2M)
+                                                          0.00      22.65 r
+  library setup time                                     -0.37      22.28
+  data required time                                                22.28
+  --------------------------------------------------------------------------
+  data required time                                                22.28
+  data arrival time                                                -16.92
+  --------------------------------------------------------------------------
+  slack (MET)                                                        5.36
+
+
+  Startpoint: P_MSDAP/controller/state_reg[1]
+              (rising edge-triggered flip-flop clocked by sclk)
+  Endpoint: P_MSDAP/data_manager_R/data_mem/data_out_reg[2]
+            (rising edge-triggered flip-flop clocked by sclk')
+  Path Group: sclk
+  Path Type: max
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock sclk (rise edge)                                  0.00       0.00
+  clock network delay (propagated)                        3.07       3.07
+  P_MSDAP/controller/state_reg[1]/CK (DFFQX2M)            0.00       3.07 r
+  P_MSDAP/controller/state_reg[1]/Q (DFFQX2M)             0.81       3.88 r
+  P_MSDAP/controller/state[1] (MSDAP_state_controller)
+                                                          0.00       3.88 r
+  P_MSDAP/U19/Y (INVX2M)                                  0.38 *     4.26 f
+  P_MSDAP/data_manager_R/state[1] (MSDAP_data_manager_1)
+                                                          0.00       4.26 f
+  P_MSDAP/data_manager_R/U12/Y (NOR3X2M)                  1.25 *     5.52 r
+  P_MSDAP/data_manager_R/U25/Y (INVX2M)                   0.86 *     6.38 f
+  P_MSDAP/data_manager_R/U9/Y (OAI31X1M)                  0.35 *     6.73 r
+  P_MSDAP/data_manager_R/U26/Y (BUFX2M)                   1.32 *     8.05 r
+  P_MSDAP/data_manager_R/U36/Y (INVX2M)                   1.37 *     9.42 f
+  P_MSDAP/data_manager_R/U50/Y (AO22X2M)                  0.87 *    10.29 f
+  P_MSDAP/data_manager_R/data_mem/addr[3] (memory_DATA_WIDTH16_ADDR_WIDTH8_DEPTH256_1)
+                                                          0.00      10.29 f
+  P_MSDAP/data_manager_R/data_mem/U6081/Y (AND2X1M)       0.38 *    10.67 f
+  P_MSDAP/data_manager_R/data_mem/U6082/Y (AND2X2M)       0.63 *    11.30 f
+  P_MSDAP/data_manager_R/data_mem/U179/Y (BUFX2M)         1.35 *    12.66 f
+  P_MSDAP/data_manager_R/data_mem/U6618/Y (AOI22X1M)      0.53 *    13.18 r
+  P_MSDAP/data_manager_R/data_mem/U6622/Y (NAND4X1M)      0.51 *    13.69 f
+  P_MSDAP/data_manager_R/data_mem/U6623/Y (OAI21X1M)      0.26 *    13.95 r
+  P_MSDAP/data_manager_R/data_mem/U6635/Y (NAND4X1M)      1.53 *    15.48 f
+  P_MSDAP/data_manager_R/data_mem/U6636/Y (OR4X1M)        1.27 *    16.75 f
+  P_MSDAP/data_manager_R/data_mem/data_out_reg[2]/D (EDFFX2M)
+                                                          0.01 *    16.76 f
+  data arrival time                                                 16.76
+
+  clock sclk' (rise edge)                                20.00      20.00
+  clock network delay (propagated)                        2.64      22.64
+  P_MSDAP/data_manager_R/data_mem/data_out_reg[2]/CK (EDFFX2M)
+                                                          0.00      22.64 r
+  library setup time                                     -0.39      22.25
+  data required time                                                22.25
+  --------------------------------------------------------------------------
+  data required time                                                22.25
+  data arrival time                                                -16.76
+  --------------------------------------------------------------------------
+  slack (MET)                                                        5.50
+
+
+  Startpoint: P_MSDAP/controller/state_reg[1]
+              (rising edge-triggered flip-flop clocked by sclk)
+  Endpoint: P_MSDAP/data_manager_R/data_mem/data_out_reg[9]
+            (rising edge-triggered flip-flop clocked by sclk')
+  Path Group: sclk
+  Path Type: max
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock sclk (rise edge)                                  0.00       0.00
+  clock network delay (propagated)                        3.07       3.07
+  P_MSDAP/controller/state_reg[1]/CK (DFFQX2M)            0.00       3.07 r
+  P_MSDAP/controller/state_reg[1]/Q (DFFQX2M)             0.81       3.88 r
+  P_MSDAP/controller/state[1] (MSDAP_state_controller)
+                                                          0.00       3.88 r
+  P_MSDAP/U19/Y (INVX2M)                                  0.38 *     4.26 f
+  P_MSDAP/data_manager_R/state[1] (MSDAP_data_manager_1)
+                                                          0.00       4.26 f
+  P_MSDAP/data_manager_R/U12/Y (NOR3X2M)                  1.25 *     5.52 r
+  P_MSDAP/data_manager_R/U25/Y (INVX2M)                   0.86 *     6.38 f
+  P_MSDAP/data_manager_R/U9/Y (OAI31X1M)                  0.35 *     6.73 r
+  P_MSDAP/data_manager_R/U26/Y (BUFX2M)                   1.32 *     8.05 r
+  P_MSDAP/data_manager_R/U36/Y (INVX2M)                   1.37 *     9.42 f
+  P_MSDAP/data_manager_R/U53/Y (AO22X2M)                  0.88 *    10.30 f
+  P_MSDAP/data_manager_R/data_mem/addr[1] (memory_DATA_WIDTH16_ADDR_WIDTH8_DEPTH256_1)
+                                                          0.00      10.30 f
+  P_MSDAP/data_manager_R/data_mem/U1879/Y (INVX2M)        0.16 *    10.46 r
+  P_MSDAP/data_manager_R/data_mem/U6063/Y (NOR2X1M)       0.17 *    10.63 f
+  P_MSDAP/data_manager_R/data_mem/U6089/Y (AND2X2M)       0.67 *    11.30 f
+  P_MSDAP/data_manager_R/data_mem/U200/Y (BUFX2M)         1.33 *    12.63 f
+  P_MSDAP/data_manager_R/data_mem/U7887/Y (AOI22X1M)      0.64 *    13.27 r
+  P_MSDAP/data_manager_R/data_mem/U7889/Y (NAND4X1M)      0.48 *    13.75 f
+  P_MSDAP/data_manager_R/data_mem/U7890/Y (OAI21X1M)      0.37 *    14.12 r
+  P_MSDAP/data_manager_R/data_mem/U7902/Y (NAND4X1M)      0.83 *    14.94 f
+  P_MSDAP/data_manager_R/data_mem/U7903/Y (OR4X1M)        1.62 *    16.56 f
+  P_MSDAP/data_manager_R/data_mem/data_out_reg[9]/D (EDFFX2M)
+                                                          0.03 *    16.59 f
+  data arrival time                                                 16.59
+
+  clock sclk' (rise edge)                                20.00      20.00
+  clock network delay (propagated)                        2.64      22.64
+  P_MSDAP/data_manager_R/data_mem/data_out_reg[9]/CK (EDFFX2M)
+                                                          0.00      22.64 r
+  library setup time                                     -0.50      22.15
+  data required time                                                22.15
+  --------------------------------------------------------------------------
+  data required time                                                22.15
+  data arrival time                                                -16.59
+  --------------------------------------------------------------------------
+  slack (MET)                                                        5.56
+
+
+  Startpoint: P_MSDAP/controller/state_reg[1]
+              (rising edge-triggered flip-flop clocked by sclk)
+  Endpoint: P_MSDAP/data_manager_R/data_mem/data_out_reg[11]
+            (rising edge-triggered flip-flop clocked by sclk')
+  Path Group: sclk
+  Path Type: max
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock sclk (rise edge)                                  0.00       0.00
+  clock network delay (propagated)                        3.07       3.07
+  P_MSDAP/controller/state_reg[1]/CK (DFFQX2M)            0.00       3.07 r
+  P_MSDAP/controller/state_reg[1]/Q (DFFQX2M)             0.81       3.88 r
+  P_MSDAP/controller/state[1] (MSDAP_state_controller)
+                                                          0.00       3.88 r
+  P_MSDAP/U19/Y (INVX2M)                                  0.38 *     4.26 f
+  P_MSDAP/data_manager_R/state[1] (MSDAP_data_manager_1)
+                                                          0.00       4.26 f
+  P_MSDAP/data_manager_R/U12/Y (NOR3X2M)                  1.25 *     5.52 r
+  P_MSDAP/data_manager_R/U25/Y (INVX2M)                   0.86 *     6.38 f
+  P_MSDAP/data_manager_R/U9/Y (OAI31X1M)                  0.35 *     6.73 r
+  P_MSDAP/data_manager_R/U26/Y (BUFX2M)                   1.32 *     8.05 r
+  P_MSDAP/data_manager_R/U36/Y (INVX2M)                   1.37 *     9.42 f
+  P_MSDAP/data_manager_R/U51/Y (AO22X2M)                  0.85 *    10.27 f
+  P_MSDAP/data_manager_R/data_mem/addr[2] (memory_DATA_WIDTH16_ADDR_WIDTH8_DEPTH256_1)
+                                                          0.00      10.27 f
+  P_MSDAP/data_manager_R/data_mem/U1878/Y (INVX2M)        0.20 *    10.47 r
+  P_MSDAP/data_manager_R/data_mem/U6062/Y (NOR2X1M)       0.17 *    10.64 f
+  P_MSDAP/data_manager_R/data_mem/U6069/Y (AND2X2M)       0.63 *    11.27 f
+  P_MSDAP/data_manager_R/data_mem/U148/Y (BUFX2M)         1.45 *    12.72 f
+  P_MSDAP/data_manager_R/data_mem/U8086/Y (AOI22X1M)      0.54 *    13.26 r
+  P_MSDAP/data_manager_R/data_mem/U8089/Y (NAND4X1M)      0.45 *    13.71 f
+  P_MSDAP/data_manager_R/data_mem/U8095/Y (OAI21X1M)      0.53 *    14.23 r
+  P_MSDAP/data_manager_R/data_mem/U8129/Y (NAND4X1M)      0.64 *    14.87 f
+  P_MSDAP/data_manager_R/data_mem/U8265/Y (OR4X1M)        1.63 *    16.50 f
+  P_MSDAP/data_manager_R/data_mem/data_out_reg[11]/D (EDFFX2M)
+                                                          0.03 *    16.54 f
+  data arrival time                                                 16.54
+
+  clock sclk' (rise edge)                                20.00      20.00
+  clock network delay (propagated)                        2.64      22.64
+  P_MSDAP/data_manager_R/data_mem/data_out_reg[11]/CK (EDFFX2M)
+                                                          0.00      22.64 r
+  library setup time                                     -0.51      22.13
+  data required time                                                22.13
+  --------------------------------------------------------------------------
+  data required time                                                22.13
+  data arrival time                                                -16.54
+  --------------------------------------------------------------------------
+  slack (MET)                                                        5.60
+
+
+  Startpoint: P_MSDAP/controller/state_reg[1]
+              (rising edge-triggered flip-flop clocked by sclk)
+  Endpoint: P_MSDAP/data_manager_R/data_mem/data_out_reg[10]
+            (rising edge-triggered flip-flop clocked by sclk')
+  Path Group: sclk
+  Path Type: max
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock sclk (rise edge)                                  0.00       0.00
+  clock network delay (propagated)                        3.07       3.07
+  P_MSDAP/controller/state_reg[1]/CK (DFFQX2M)            0.00       3.07 r
+  P_MSDAP/controller/state_reg[1]/Q (DFFQX2M)             0.81       3.88 r
+  P_MSDAP/controller/state[1] (MSDAP_state_controller)
+                                                          0.00       3.88 r
+  P_MSDAP/U19/Y (INVX2M)                                  0.38 *     4.26 f
+  P_MSDAP/data_manager_R/state[1] (MSDAP_data_manager_1)
+                                                          0.00       4.26 f
+  P_MSDAP/data_manager_R/U12/Y (NOR3X2M)                  1.25 *     5.52 r
+  P_MSDAP/data_manager_R/U25/Y (INVX2M)                   0.86 *     6.38 f
+  P_MSDAP/data_manager_R/U9/Y (OAI31X1M)                  0.35 *     6.73 r
+  P_MSDAP/data_manager_R/U26/Y (BUFX2M)                   1.32 *     8.05 r
+  P_MSDAP/data_manager_R/U36/Y (INVX2M)                   1.37 *     9.42 f
+  P_MSDAP/data_manager_R/U51/Y (AO22X2M)                  0.85 *    10.27 f
+  P_MSDAP/data_manager_R/data_mem/addr[2] (memory_DATA_WIDTH16_ADDR_WIDTH8_DEPTH256_1)
+                                                          0.00      10.27 f
+  P_MSDAP/data_manager_R/data_mem/U1878/Y (INVX2M)        0.20 *    10.47 r
+  P_MSDAP/data_manager_R/data_mem/U6062/Y (NOR2X1M)       0.17 *    10.64 f
+  P_MSDAP/data_manager_R/data_mem/U6069/Y (AND2X2M)       0.63 *    11.27 f
+  P_MSDAP/data_manager_R/data_mem/U148/Y (BUFX2M)         1.45 *    12.72 f
+  P_MSDAP/data_manager_R/data_mem/U8028/Y (AOI22X1M)      0.55 *    13.26 r
+  P_MSDAP/data_manager_R/data_mem/U8031/Y (NAND4X1M)      0.64 *    13.91 f
+  P_MSDAP/data_manager_R/data_mem/U8037/Y (OAI21X1M)      0.39 *    14.30 r
+  P_MSDAP/data_manager_R/data_mem/U8038/Y (NAND4X1M)      0.55 *    14.86 f
+  P_MSDAP/data_manager_R/data_mem/U8084/Y (OR4X1M)        1.64 *    16.49 f
+  P_MSDAP/data_manager_R/data_mem/data_out_reg[10]/D (EDFFX2M)
+                                                          0.03 *    16.52 f
+  data arrival time                                                 16.52
+
+  clock sclk' (rise edge)                                20.00      20.00
+  clock network delay (propagated)                        2.64      22.64
+  P_MSDAP/data_manager_R/data_mem/data_out_reg[10]/CK (EDFFX2M)
+                                                          0.00      22.64 r
+  library setup time                                     -0.51      22.13
+  data required time                                                22.13
+  --------------------------------------------------------------------------
+  data required time                                                22.13
+  data arrival time                                                -16.52
+  --------------------------------------------------------------------------
+  slack (MET)                                                        5.61
+
+
+  Startpoint: P_MSDAP/controller/state_reg[1]
+              (rising edge-triggered flip-flop clocked by sclk)
+  Endpoint: P_MSDAP/data_manager_L/data_mem/data_out_reg[12]
+            (rising edge-triggered flip-flop clocked by sclk')
+  Path Group: sclk
+  Path Type: max
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock sclk (rise edge)                                  0.00       0.00
+  clock network delay (propagated)                        3.07       3.07
+  P_MSDAP/controller/state_reg[1]/CK (DFFQX2M)            0.00       3.07 r
+  P_MSDAP/controller/state_reg[1]/Q (DFFQX2M)             0.81       3.88 r
+  P_MSDAP/controller/state[1] (MSDAP_state_controller)
+                                                          0.00       3.88 r
+  P_MSDAP/U19/Y (INVX2M)                                  0.38 *     4.26 f
+  P_MSDAP/data_manager_L/state[1] (MSDAP_data_manager_0)
+                                                          0.00       4.26 f
+  P_MSDAP/data_manager_L/U12/Y (NOR3X2M)                  0.80 *     5.07 r
+  P_MSDAP/data_manager_L/U8/Y (INVX2M)                    0.53 *     5.60 f
+  P_MSDAP/data_manager_L/U9/Y (OAI31X1M)                  0.31 *     5.90 r
+  P_MSDAP/data_manager_L/U11/Y (BUFX2M)                   1.00 *     6.90 r
+  P_MSDAP/data_manager_L/U25/Y (INVX2M)                   1.28 *     8.18 f
+  P_MSDAP/data_manager_L/U50/Y (AO22X2M)                  0.97 *     9.15 f
+  P_MSDAP/data_manager_L/data_mem/addr[3] (memory_DATA_WIDTH16_ADDR_WIDTH8_DEPTH256_0)
+                                                          0.00       9.15 f
+  P_MSDAP/data_manager_L/data_mem/U6088/Y (AND2X1M)       0.47 *     9.62 f
+  P_MSDAP/data_manager_L/data_mem/U6092/Y (AND2X2M)       0.64 *    10.26 f
+  P_MSDAP/data_manager_L/data_mem/U157/Y (BUFX2M)         1.63 *    11.89 f
+  P_MSDAP/data_manager_L/data_mem/U8375/Y (AOI22X1M)      0.62 *    12.51 r
+  P_MSDAP/data_manager_L/data_mem/U8376/Y (NAND4X1M)      0.75 *    13.26 f
+  P_MSDAP/data_manager_L/data_mem/U8377/Y (OAI21X1M)      0.29 *    13.55 r
+  P_MSDAP/data_manager_L/data_mem/U8400/Y (NAND4X1M)      1.77 *    15.33 f
+  P_MSDAP/data_manager_L/data_mem/U8446/Y (OR4X1M)        1.27 *    16.59 f
+  P_MSDAP/data_manager_L/data_mem/data_out_reg[12]/D (EDFFX2M)
+                                                          0.00 *    16.60 f
+  data arrival time                                                 16.60
+
+  clock sclk' (rise edge)                                20.00      20.00
+  clock network delay (propagated)                        2.60      22.60
+  P_MSDAP/data_manager_L/data_mem/data_out_reg[12]/CK (EDFFX2M)
+                                                          0.00      22.60 r
+  library setup time                                     -0.37      22.23
+  data required time                                                22.23
+  --------------------------------------------------------------------------
+  data required time                                                22.23
+  data arrival time                                                -16.60
+  --------------------------------------------------------------------------
+  slack (MET)                                                        5.63
+
+
+  Startpoint: P_MSDAP/controller/state_reg[1]
+              (rising edge-triggered flip-flop clocked by sclk)
+  Endpoint: P_MSDAP/data_manager_L/data_mem/data_out_reg[7]
+            (rising edge-triggered flip-flop clocked by sclk')
+  Path Group: sclk
+  Path Type: max
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock sclk (rise edge)                                  0.00       0.00
+  clock network delay (propagated)                        3.07       3.07
+  P_MSDAP/controller/state_reg[1]/CK (DFFQX2M)            0.00       3.07 r
+  P_MSDAP/controller/state_reg[1]/Q (DFFQX2M)             0.81       3.88 r
+  P_MSDAP/controller/state[1] (MSDAP_state_controller)
+                                                          0.00       3.88 r
+  P_MSDAP/U19/Y (INVX2M)                                  0.38 *     4.26 f
+  P_MSDAP/data_manager_L/state[1] (MSDAP_data_manager_0)
+                                                          0.00       4.26 f
+  P_MSDAP/data_manager_L/U12/Y (NOR3X2M)                  0.80 *     5.07 r
+  P_MSDAP/data_manager_L/U8/Y (INVX2M)                    0.53 *     5.60 f
+  P_MSDAP/data_manager_L/U9/Y (OAI31X1M)                  0.31 *     5.90 r
+  P_MSDAP/data_manager_L/U11/Y (BUFX2M)                   1.00 *     6.90 r
+  P_MSDAP/data_manager_L/U25/Y (INVX2M)                   1.28 *     8.18 f
+  P_MSDAP/data_manager_L/U50/Y (AO22X2M)                  0.97 *     9.15 f
+  P_MSDAP/data_manager_L/data_mem/addr[3] (memory_DATA_WIDTH16_ADDR_WIDTH8_DEPTH256_0)
+                                                          0.00       9.15 f
+  P_MSDAP/data_manager_L/data_mem/U6088/Y (AND2X1M)       0.47 *     9.62 f
+  P_MSDAP/data_manager_L/data_mem/U6092/Y (AND2X2M)       0.64 *    10.26 f
+  P_MSDAP/data_manager_L/data_mem/U157/Y (BUFX2M)         1.63 *    11.89 f
+  P_MSDAP/data_manager_L/data_mem/U7459/Y (AOI22X1M)      0.80 *    12.69 r
+  P_MSDAP/data_manager_L/data_mem/U7460/Y (NAND4X1M)      0.49 *    13.18 f
+  P_MSDAP/data_manager_L/data_mem/U7461/Y (OAI21X1M)      0.26 *    13.44 r
+  P_MSDAP/data_manager_L/data_mem/U7495/Y (NAND4X1M)      1.90 *    15.34 f
+  P_MSDAP/data_manager_L/data_mem/U7541/Y (OR4X1M)        1.23 *    16.57 f
+  P_MSDAP/data_manager_L/data_mem/data_out_reg[7]/D (EDFFX2M)
+                                                          0.00 *    16.57 f
+  data arrival time                                                 16.57
+
+  clock sclk' (rise edge)                                20.00      20.00
+  clock network delay (propagated)                        2.60      22.60
+  P_MSDAP/data_manager_L/data_mem/data_out_reg[7]/CK (EDFFX2M)
+                                                          0.00      22.60 r
+  library setup time                                     -0.36      22.24
+  data required time                                                22.24
+  --------------------------------------------------------------------------
+  data required time                                                22.24
+  data arrival time                                                -16.57
+  --------------------------------------------------------------------------
+  slack (MET)                                                        5.67
+
+
+  Startpoint: P_MSDAP/controller/state_reg[1]
+              (rising edge-triggered flip-flop clocked by sclk)
+  Endpoint: P_MSDAP/data_manager_L/data_mem/data_out_reg[2]
+            (rising edge-triggered flip-flop clocked by sclk')
+  Path Group: sclk
+  Path Type: max
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock sclk (rise edge)                                  0.00       0.00
+  clock network delay (propagated)                        3.07       3.07
+  P_MSDAP/controller/state_reg[1]/CK (DFFQX2M)            0.00       3.07 r
+  P_MSDAP/controller/state_reg[1]/Q (DFFQX2M)             0.81       3.88 r
+  P_MSDAP/controller/state[1] (MSDAP_state_controller)
+                                                          0.00       3.88 r
+  P_MSDAP/U19/Y (INVX2M)                                  0.38 *     4.26 f
+  P_MSDAP/data_manager_L/state[1] (MSDAP_data_manager_0)
+                                                          0.00       4.26 f
+  P_MSDAP/data_manager_L/U12/Y (NOR3X2M)                  0.80 *     5.07 r
+  P_MSDAP/data_manager_L/U8/Y (INVX2M)                    0.53 *     5.60 f
+  P_MSDAP/data_manager_L/U9/Y (OAI31X1M)                  0.31 *     5.90 r
+  P_MSDAP/data_manager_L/U11/Y (BUFX2M)                   1.00 *     6.90 r
+  P_MSDAP/data_manager_L/U25/Y (INVX2M)                   1.28 *     8.18 f
+  P_MSDAP/data_manager_L/U50/Y (AO22X2M)                  0.97 *     9.15 f
+  P_MSDAP/data_manager_L/data_mem/addr[3] (memory_DATA_WIDTH16_ADDR_WIDTH8_DEPTH256_0)
+                                                          0.00       9.15 f
+  P_MSDAP/data_manager_L/data_mem/U6088/Y (AND2X1M)       0.47 *     9.62 f
+  P_MSDAP/data_manager_L/data_mem/U6092/Y (AND2X2M)       0.64 *    10.26 f
+  P_MSDAP/data_manager_L/data_mem/U157/Y (BUFX2M)         1.63 *    11.89 f
+  P_MSDAP/data_manager_L/data_mem/U6554/Y (AOI22X1M)      0.55 *    12.44 r
+  P_MSDAP/data_manager_L/data_mem/U6555/Y (NAND4X1M)      0.87 *    13.31 f
+  P_MSDAP/data_manager_L/data_mem/U6556/Y (OAI21X1M)      0.36 *    13.67 r
+  P_MSDAP/data_manager_L/data_mem/U6590/Y (NAND4X1M)      1.50 *    15.17 f
+  P_MSDAP/data_manager_L/data_mem/U6636/Y (OR4X1M)        1.32 *    16.48 f
+  P_MSDAP/data_manager_L/data_mem/data_out_reg[2]/D (EDFFX2M)
+                                                          0.00 *    16.49 f
+  data arrival time                                                 16.49
+
+  clock sclk' (rise edge)                                20.00      20.00
+  clock network delay (propagated)                        2.60      22.60
+  P_MSDAP/data_manager_L/data_mem/data_out_reg[2]/CK (EDFFX2M)
+                                                          0.00      22.60 r
+  library setup time                                     -0.39      22.21
+  data required time                                                22.21
+  --------------------------------------------------------------------------
+  data required time                                                22.21
+  data arrival time                                                -16.49
+  --------------------------------------------------------------------------
+  slack (MET)                                                        5.72
+
+
+1

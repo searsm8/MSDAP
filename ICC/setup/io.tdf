@@ -1,0 +1,48 @@
+set_pad_physical_constraints -pad_name CLL -side 4 
+set_pad_physical_constraints -pad_name CLR -side 3 
+set_pad_physical_constraints -pad_name CTR -side 2 
+set_pad_physical_constraints -pad_name CTL -side 1 
+
+
+set_pad_physical_constraints -pad_name reset_PB -side 1 -order 1
+set_pad_physical_constraints -pad_name VSS_L -side 1 -order 2
+set_pad_physical_constraints -pad_name VDD_L -side 1 -order 3
+set_pad_physical_constraints -pad_name dclk_PB -side 1 -order 4
+set_pad_physical_constraints -pad_name sclk_PB -side 1 -order 5
+
+
+set_pad_physical_constraints -pad_name outReady_PB -side 3 -order 1
+set_pad_physical_constraints -pad_name inReady_PB -side 3 -order 2
+set_pad_physical_constraints -pad_name VSS_R -side 3 -order 3
+set_pad_physical_constraints -pad_name VDD_R -side 3 -order 4
+set_pad_physical_constraints -pad_name start_PB -side 3 -order 5
+
+
+
+set_pad_physical_constraints -pad_name frame_PB -side 2 -order 1
+set_pad_physical_constraints -pad_name VDD_T -side 2 -order 2
+set_pad_physical_constraints -pad_name VSS_T -side 2 -order 3
+set_pad_physical_constraints -pad_name inputL_PB -side 2 -order 4
+set_pad_physical_constraints -pad_name inputR_PB -side 2 -order 5
+
+
+
+set_pad_physical_constraints -pad_name NC -side 4 -order 1
+set_pad_physical_constraints -pad_name VDD_B -side 4 -order 2
+set_pad_physical_constraints -pad_name VSS_B -side 4 -order 3
+set_pad_physical_constraints -pad_name outputL_PB -side 4 -order 4
+set_pad_physical_constraints -pad_name outputR_PB -side 4 -order 5
+
+
+set_pin_physical_constraints -pin_name {sclk} -layers {METAL3} -width 1 -depth 1 
+set_pin_physical_constraints -pin_name {dclk} -layers {METAL3} -width 1 -depth 1 
+set_pin_physical_constraints -pin_name {reset} -layers {METAL2} -width 1 -depth 1 
+set_pin_physical_constraints -pin_name {start} -layers {METAL2} -width 1 -depth 1 
+set_pin_physical_constraints -pin_name {inputL} -layers {METAL2} -width 1 -depth 1 
+set_pin_physical_constraints -pin_name {inputR} -layers {METAL2} -width 1 -depth 1 
+set_pin_physical_constraints -pin_name {outReady} -layers {METAL2} -width 1 -depth 1 
+set_pin_physical_constraints -pin_name {inReady} -layers {METAL2} -width 1 -depth 1 
+set_pin_physical_constraints -pin_name {outputL} -layers {METAL2} -width 1 -depth 1 
+set_pin_physical_constraints -pin_name {outputR} -layers {METAL2} -width 1 -depth 1 
+
+

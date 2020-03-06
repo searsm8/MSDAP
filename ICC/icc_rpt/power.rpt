@@ -1,0 +1,82 @@
+Warning: Cell 'Sclk_PB' is being marked as "dont_touch" because it has 
+	a fixed_placement attribute. (PSYN-040)
+Warning: Cell 'Dclk_PB' is being marked as "dont_touch" because it has 
+	a fixed_placement attribute. (PSYN-040)
+Warning: Cell 'Start_PB' is being marked as "dont_touch" because it has 
+	a fixed_placement attribute. (PSYN-040)
+Warning: Cell 'Reset_n_PB' is being marked as "dont_touch" because it has 
+	a fixed_placement attribute. (PSYN-040)
+Warning: Cell 'Frame_PB' is being marked as "dont_touch" because it has 
+	a fixed_placement attribute. (PSYN-040)
+Warning: Cell 'InputL_PB' is being marked as "dont_touch" because it has 
+	a fixed_placement attribute. (PSYN-040)
+Warning: Cell 'InputR_PB' is being marked as "dont_touch" because it has 
+	a fixed_placement attribute. (PSYN-040)
+Warning: Cell 'InReady_PB' is being marked as "dont_touch" because it has 
+	a fixed_placement attribute. (PSYN-040)
+Warning: Cell 'OutReady_PB' is being marked as "dont_touch" because it has 
+	a fixed_placement attribute. (PSYN-040)
+Warning: Cell 'OutputL_PB' is being marked as "dont_touch" because it has 
+	a fixed_placement attribute. (PSYN-040)
+Warning: Cell 'OutputR_PB' is being marked as "dont_touch" because it has 
+	a fixed_placement attribute. (PSYN-040)
+Warning: The following library cells don't have power description:PFILL50  PFILL20  PFILL10  PFILL2  PFILL01  PFILL001  PCORNER  PFILL1   (PWR-682)
+Information: Updating design information... (UID-85)
+Information: Input delay ('rise') on clock port 'sclk' will be added to the clock's propagated skew. (TIM-112)
+Information: Input delay ('fall') on clock port 'sclk' will be added to the clock's propagated skew. (TIM-112)
+Information: Input delay ('rise') on clock port 'dclk' will be added to the clock's propagated skew. (TIM-112)
+Information: Input delay ('fall') on clock port 'dclk' will be added to the clock's propagated skew. (TIM-112)
+Information: Propagating switching activity (low effort zero delay simulation). (PWR-6)
+Warning: Design has unannotated primary inputs. (PWR-414)
+Warning: Design has unannotated sequential cell outputs. (PWR-415)
+Warning: The following physical-only library cells don't have power description that matches design's operation condition:PVSS3  PVDD1   (PWR-681)
+ 
+****************************************
+Report : power
+        -analysis_effort low
+Design : Chip
+Version: M-2016.12-SP5
+Date   : Mon Nov 26 16:07:33 2018
+****************************************
+
+
+Library(s) Used:
+
+    ss_1v62_125c (File: /home/eng/z/zxb107020/synopsys/ss_1v62_125c.db)
+    SP018EE_V0p5_max (File: /home/eng/z/zxb107020/synopsys/io_max.db)
+
+
+Operating Conditions: ss_1v62_125c   Library: ss_1v62_125c
+Wire Load Model Mode: top
+
+
+Global Operating Voltage = 1.62 
+Power-specific unit information :
+    Voltage Units = 1V
+    Capacitance Units = 1.000000pf
+    Time Units = 1ns
+    Dynamic Power Units = 1mW    (derived from V,C,T units)
+    Leakage Power Units = 1pW
+
+
+  Cell Internal Power  =  36.5540 mW   (83%)
+  Net Switching Power  =   7.6695 mW   (17%)
+                         ---------
+Total Dynamic Power    =  44.2235 mW  (100%)
+
+Cell Leakage Power     =  44.7530 uW
+
+
+                 Internal         Switching           Leakage            Total
+Power Group      Power            Power               Power              Power   (   %    )  Attrs
+--------------------------------------------------------------------------------------------------
+io_pad         7.7060e-02            0.3165        3.7675e+05            0.3940  (   0.89%)
+memory             0.0000            0.0000            0.0000            0.0000  (   0.00%)
+black_box          0.0000            0.0000            0.0000            0.0000  (   0.00%)
+clock_network      0.7367            6.4944        7.2720e+05            7.2318  (  16.34%)
+register          35.6188        2.3517e-02        2.7776e+07           35.6701  (  80.58%)
+sequential     1.2202e-02            0.0000        1.7205e+05        1.2374e-02  (   0.03%)
+combinational      0.1092            0.8350        1.5701e+07            0.9600  (   2.17%)
+--------------------------------------------------------------------------------------------------
+Total             36.5540 mW         7.6695 mW     4.4753e+07 pW        44.2682 mW
+1

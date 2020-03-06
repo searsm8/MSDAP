@@ -1,0 +1,11 @@
+set_attribute -type boolean [get_pins OutputR_PB/PAD] is_pad true
+set_attribute -type boolean [get_pins OutputL_PB/PAD] is_pad true
+set_attribute -type boolean [get_pins OutReady_PB/PAD] is_pad true
+set_attribute -type boolean [get_pins InReady_PB/PAD] is_pad true
+set_attribute -type boolean [get_pins InputR_PB/PAD] is_pad true
+set_attribute -type boolean [get_pins InputL_PB/PAD] is_pad true
+set_attribute -type boolean [get_pins Frame_PB/PAD] is_pad true
+set_attribute -type boolean [get_pins Reset_n_PB/PAD] is_pad true
+set_attribute -type boolean [get_pins Start_PB/PAD] is_pad true
+set_attribute -type boolean [get_pins Dclk_PB/PAD] is_pad true
+set_attribute -type boolean [get_pins Sclk_PB/PAD] is_pad true

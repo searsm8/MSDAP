@@ -1,0 +1,41 @@
+source Synopsys
+. /proj/cad/startup/profile.synopsys_2016
+
+start IC compiler:
+icc_shell
+gui_start
+
+in ICC :
+source ./setup/icc_lib.tcl
+source ./setup/icc_read.tcl
+source ./setup/create_cell.tcl
+read_pin_pad_physical_constraints ./setup/io.tdf
+source ./setup/floorplan.tcl
+source ./setup/preroute.tcl
+
+
+Placement->Core Placement and Optimization … 
+
+report_placement_utilization > icc_rpt/util.rpt
+
+set_fix_hold sclk
+Clock->Core CTS and Optimization
+
+
+set_operating_conditions -min_library ff_1v98_0c -min ff_1v98_0c -max_library ss_1v62_125c -max ss_1v62_125c
+
+report_timing -max_paths 20 -delay max > icc_rpt/setup.rpt
+
+set_operating_conditions -min_library ff_1v98_0c -min ff_1v98_0c -max_library ss_1v62_125c -max ss_1v62_125c
+
+report_timing -max_paths 20 -delay min > icc_rpt/hold.rpt
+
+Route -> Core Routing and Optimization
+Route -> Verify Route
+Route -> Extract RC
+
+report_power > icc_rpt/power.rpt
+write_parasitics -output ./icc_out/MSDAP.spef -format SPEFwrite_sdf ./icc_out/MSDAP.sdf
+write_sdc ./icc_out/MSDAP.sdc
+write_verilog ./icc_out/MSDAP.v
+save_mw_cel -as MSDAP

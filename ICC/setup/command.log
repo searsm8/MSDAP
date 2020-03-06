@@ -1,0 +1,9 @@
+#@ # 
+#@ # Running icc_shell Version M-2016.12-SP5 for linux64 -- Jul 13, 2017
+#@ # Date:   Wed Nov 29 19:35:27 2017
+#@ # Run by: xxw12203@engnx06.utdallas.edu
+#@ 
+
+ls
+pwd
+exit
