@@ -1,0 +1,40 @@
+ 
+****************************************
+Report : cell
+Design : MSDAP_top
+Version: L-2016.03-SP3
+Date   : Thu Nov 22 18:42:32 2018
+****************************************
+
+Attributes:
+    b - black box (unknown)
+    h - hierarchical
+    n - noncombinational
+    r - removable
+    u - contains unmapped logic
+
+Cell                      Reference       Library             Area  Attributes
+--------------------------------------------------------------------------------
+ALU_L                     MSDAP_ALU_0                     7595.392036
+                                                                    h, n
+ALU_R                     MSDAP_ALU_1                     7595.392036
+                                                                    h, n
+U1                        INVX2M          ss_1v62_125c    6.585600  
+U2                        INVX2M          ss_1v62_125c    6.585600  
+controller                MSDAP_state_controller          3701.107208
+                                                                    h, n
+data_manager_L            MSDAP_data_manager_0            616478.006647
+                                                                    h, n
+data_manager_R            MSDAP_data_manager_1            616478.006647
+                                                                    h, n
+input_module_L            MSDAP_S2P_0                     1997.632036
+                                                                    h, n
+input_module_R            MSDAP_S2P_1                     1997.632036
+                                                                    h, n
+output_module_L           MSDAP_P2S_0                     3286.214430
+                                                                    h, n
+output_module_R           MSDAP_P2S_1                     3273.043230
+                                                                    h, n
+--------------------------------------------------------------------------------
+Total 11 cells                                            1262415.597507
+1

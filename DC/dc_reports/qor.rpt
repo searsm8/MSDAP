@@ -1,0 +1,97 @@
+ 
+****************************************
+Report : qor
+Design : MSDAP_top
+Version: L-2016.03-SP3
+Date   : Thu Nov 22 18:42:33 2018
+****************************************
+
+
+  Timing Path Group 'dclk'
+  -----------------------------------
+  Levels of Logic:               3.00
+  Critical Path Length:          1.26
+  Critical Path Slack:           0.48
+  Critical Path Clk Period:   1302.00
+  Total Negative Slack:          0.00
+  No. of Violating Paths:        0.00
+  Worst Hold Violation:          0.00
+  Total Hold Violation:          0.00
+  No. of Hold Violations:        0.00
+  -----------------------------------
+
+  Timing Path Group 'sclk'
+  -----------------------------------
+  Levels of Logic:               2.00
+  Critical Path Length:          0.75
+  Critical Path Slack:           0.16
+  Critical Path Clk Period:     40.00
+  Total Negative Slack:          0.00
+  No. of Violating Paths:        0.00
+  Worst Hold Violation:          0.00
+  Total Hold Violation:          0.00
+  No. of Hold Violations:        0.00
+  -----------------------------------
+
+
+  Cell Count
+  -----------------------------------
+  Hierarchical Cell Count:        687
+  Hierarchical Port Count:       4096
+  Leaf Cell Count:              59801
+  Buf/Inv Cell Count:            8520
+  Buf Cell Count:                7807
+  Inv Cell Count:                 713
+  CT Buf/Inv Cell Count:            7
+  Combinational Cell Count:     41637
+  Sequential Cell Count:        18164
+  Macro Count:                      0
+  -----------------------------------
+
+
+  Area
+  -----------------------------------
+  Combinational Area:   540480.183735
+  Noncombinational Area:
+                        721935.413773
+  Buf/Inv Area:          73269.189280
+  Total Buffer Area:         68551.70
+  Total Inverter Area:        4717.48
+  Macro/Black Box Area:      0.000000
+  Net Area:                  0.000000
+  -----------------------------------
+  Cell Area:           1262415.597507
+  Design Area:         1262415.597507
+
+
+  Design Rules
+  -----------------------------------
+  Total Number of Nets:         59816
+  Nets With Violations:             0
+  Max Trans Violations:             0
+  Max Cap Violations:               0
+  -----------------------------------
+
+
+  Hostname: engnx08.utdallas.edu
+
+  Compile CPU Statistics
+  -----------------------------------------
+  Resource Sharing:                   15.99
+  Logic Optimization:                 64.94
+  Mapping Optimization:               87.14
+  -----------------------------------------
+  Overall Compile Time:              188.52
+  Overall Compile Wall Clock Time:   190.65
+
+  --------------------------------------------------------------------
+
+  Design  WNS: 0.00  TNS: 0.00  Number of Violating Paths: 0
+
+
+  Design (Hold)  WNS: 0.00  TNS: 0.00  Number of Violating Paths: 0
+
+  --------------------------------------------------------------------
+
+
+1

@@ -1,0 +1,87 @@
+Information: Updating design information... (UID-85)
+Warning: Design 'MSDAP_top' contains 3 high-fanout nets. A fanout number of 1000 will be used for delay calculations involving these nets. (TIM-134)
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -max_paths 1
+Design : MSDAP_top
+Version: L-2016.03-SP3
+Date   : Thu Nov 22 18:42:32 2018
+****************************************
+
+ # A fanout number of 1000 was used for high fanout net computations.
+
+Operating Conditions: ss_1v62_125c   Library: ss_1v62_125c
+Wire Load Model Mode: top
+
+  Startpoint: controller/input_en_DFF/Q_reg
+              (rising edge-triggered flip-flop clocked by sclk)
+  Endpoint: controller/input_counter/count_flops[3].flop/Q_reg
+            (rising edge-triggered flip-flop clocked by dclk)
+  Path Group: dclk
+  Path Type: max
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock sclk (rise edge)                              14320.00   14320.00
+  clock network delay (ideal)                             0.00   14320.00
+  controller/input_en_DFF/Q_reg/CK (DFFRQX2M)             0.00 # 14320.00 r
+  controller/input_en_DFF/Q_reg/Q (DFFRQX2M)              0.73   14320.73 r
+  controller/input_en_DFF/Q (DFF_0)                       0.00   14320.73 r
+  controller/input_counter/enable (counter_WIDTH4_0)      0.00   14320.73 r
+  controller/input_counter/U4/Y (NAND3X2M)                0.19   14320.92 f
+  controller/input_counter/U2/Y (NOR2BX2M)                0.15   14321.08 r
+  controller/input_counter/U1/Y (XOR2X2M)                 0.18   14321.26 r
+  controller/input_counter/count_flops[3].flop/D (DFF_276)
+                                                          0.00   14321.26 r
+  controller/input_counter/count_flops[3].flop/Q_reg/D (DFFRQX2M)
+                                                          0.00   14321.26 r
+  data arrival time                                              14321.26
+
+  clock dclk (rise edge)                              14322.00   14322.00
+  clock network delay (ideal)                             0.00   14322.00
+  controller/input_counter/count_flops[3].flop/Q_reg/CK (DFFRQX2M)
+                                                          0.00   14322.00 r
+  library setup time                                     -0.27   14321.73
+  data required time                                             14321.73
+  --------------------------------------------------------------------------
+  data required time                                             14321.73
+  data arrival time                                              -14321.26
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.48
+
+
+  Startpoint: frame (input port clocked by dclk)
+  Endpoint: controller/input_en_DFF/Q_reg
+            (rising edge-triggered flip-flop clocked by sclk)
+  Path Group: sclk
+  Path Type: max
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock dclk (rise edge)                              11718.00   11718.00
+  clock network delay (ideal)                             0.00   11718.00
+  input external delay                                    1.00   11719.00 f
+  frame (in)                                              0.00   11719.00 f
+  controller/frame (MSDAP_state_controller)               0.00   11719.00 f
+  controller/U20/Y (AO21XLM)                              0.31   11719.31 f
+  controller/U19/Y (OR4X2M)                               0.44   11719.75 f
+  controller/input_en_DFF/D (DFF_0)                       0.00   11719.75 f
+  controller/input_en_DFF/Q_reg/D (DFFRQX2M)              0.00   11719.75 f
+  data arrival time                                              11719.75
+
+  clock sclk (rise edge)                              11720.00   11720.00
+  clock network delay (ideal)                             0.00   11720.00
+  controller/input_en_DFF/Q_reg/CK (DFFRQX2M)             0.00   11720.00 r
+  library setup time                                     -0.09   11719.91
+  data required time                                             11719.91
+  --------------------------------------------------------------------------
+  data required time                                             11719.91
+  data arrival time                                              -11719.75
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.16
+
+
+1
